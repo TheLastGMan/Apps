@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "FAA_NFDC_Reader", "FAA_NFDC_Reader\FAA_NFDC_Reader.vbproj", "{22C0F019-A5BC-4F04-9B5F-8009B547C5AC}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://rpgcor.tfspreview.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = FAA_NFDC_Reader\\FAA_NFDC_Reader.vbproj
+		SccProjectName1 = FAA_NFDC_Reader
+		SccLocalPath1 = FAA_NFDC_Reader
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{22C0F019-A5BC-4F04-9B5F-8009B547C5AC}.Debug|x86.ActiveCfg = Debug|x86
+		{22C0F019-A5BC-4F04-9B5F-8009B547C5AC}.Debug|x86.Build.0 = Debug|x86
+		{22C0F019-A5BC-4F04-9B5F-8009B547C5AC}.Release|x86.ActiveCfg = Release|x86
+		{22C0F019-A5BC-4F04-9B5F-8009B547C5AC}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

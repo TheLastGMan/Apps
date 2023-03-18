@@ -1,0 +1,37 @@
+﻿<%@ Master Language="VB" CodeFile="Main.master.vb" Inherits="master_Main" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="padding-top:5px; margin:auto; width:300px; text-align:center;">
+    <form id="form1" runat="server" style="width:300px;">
+    <div>
+        <div style="text-align:center; font-size:36px;">RPGCor<br/>FlightNav</div>
+        <div>
+        <font size="+2">
+            <asp:ContentPlaceHolder id="Header" runat="server">
+            
+                <p>
+                    &nbsp;</p>
+            
+            </asp:ContentPlaceHolder>
+        </font>
+        </div>
+        <asp:ContentPlaceHolder ID="Bodyx" runat="server">
+            
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+        <input type="hidden" name="cmd" value="_s-xclick" />
+        <input type="hidden" name="hosted_button_id" value="R9AV6C2YBKNQL" />
+        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" name="submit" alt="PayPal" style="height: 85px; width: 275px" />
+        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+    </form>
+</body>
+</html>

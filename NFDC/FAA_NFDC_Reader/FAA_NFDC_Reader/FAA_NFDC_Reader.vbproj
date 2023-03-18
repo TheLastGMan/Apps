@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{22C0F019-A5BC-4F04-9B5F-8009B547C5AC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>FAA_NFDC_Reader.My.MyApplication</StartupObject>
+    <RootNamespace>FAA_NFDC_Reader</RootNamespace>
+    <AssemblyName>FAA_NFDC_Reader</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>FAA_NFDC_Reader.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>FAA_NFDC_Reader.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.SqlServer.Compact.4.0.8876.1\lib\net40\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SqlServerCe.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\EntityFramework.SqlServerCompact.4.3.5\lib\net40\System.Data.SqlServerCe.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.ComponentModel" />
+    <Import Include="System.ComponentModel.DataAnnotations" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\FAAContext.vb" />
+    <Compile Include="Entity\APT\APT.vb" />
+    <Compile Include="Entity\AWOS\AWOS1.vb" />
+    <Compile Include="Entity\AWOS\AWOS2.vb" />
+    <Compile Include="Entity\COM.vb" />
+    <Compile Include="Entity\FIX1.vb" />
+    <Compile Include="Entity\NATFIX.vb" />
+    <Compile Include="Entity\NAV\NAV1.vb" />
+    <Compile Include="Entity\NAV\NAV2.vb" />
+    <Compile Include="Entity\rowguid.vb" />
+    <Compile Include="Entity\rowguidkey.vb" />
+    <Compile Include="Entity\TWR\TWR1.vb" />
+    <Compile Include="Entity\TWR\TWR2.vb" />
+    <Compile Include="Entity\TWR\TWR3.vb" />
+    <Compile Include="Entity\TWR\TWR4.vb" />
+    <Compile Include="Entity\TWR\TWR7.vb" />
+    <Compile Include="Entity\TWR\TWR8.vb" />
+    <Compile Include="Entity\TWR\TWR9.vb" />
+    <Compile Include="Repository\APT1.vb" />
+    <Compile Include="Repository\AWOS\AWOS1.vb" />
+    <Compile Include="Repository\AWOS\AWOS2.vb" />
+    <Compile Include="Repository\COM.vb" />
+    <Compile Include="Repository\FIX\FIX1.vb" />
+    <Compile Include="Repository\NATFIX.vb" />
+    <Compile Include="Repository\NAV\NAV1.vb" />
+    <Compile Include="Repository\NAV\NAV2.vb" />
+    <Compile Include="Repository\TWR\TWR1.vb" />
+    <Compile Include="Repository\TWR\TWR2.vb" />
+    <Compile Include="Repository\TWR\TWR3.vb" />
+    <Compile Include="Repository\TWR\TWR4.vb" />
+    <Compile Include="Repository\TWR\TWR7.vb" />
+    <Compile Include="Repository\TWR\TWR8.vb" />
+    <Compile Include="Repository\TWR\TWR9.vb" />
+    <Compile Include="tables\APT\APT1.vb" />
+    <Compile Include="tables\AWOS\AWOS1.vb" />
+    <Compile Include="tables\AWOS\AWOS2.vb" />
+    <Compile Include="tables\Common.vb" />
+    <Compile Include="tables\APT.vb" />
+    <Compile Include="tables\AWOS.vb" />
+    <Compile Include="tables\COM.vb" />
+    <Compile Include="DB.vb" />
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FAA_commons\IFAALoader.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="tables\FIX.vb" />
+    <Compile Include="tables\FIX\FIX1.vb" />
+    <Compile Include="tables\NATFIX.vb" />
+    <Compile Include="tables\NAV.vb" />
+    <Compile Include="tables\NAV\NAV1.vb" />
+    <Compile Include="tables\NAV\NAV2.vb" />
+    <Compile Include="tables\TWR.vb" />
+    <Compile Include="tables\TWR\TWR1.vb" />
+    <Compile Include="tables\TWR\TWR2.vb" />
+    <Compile Include="tables\TWR\TWR3.vb" />
+    <Compile Include="tables\TWR\TWR4.vb" />
+    <Compile Include="tables\TWR\TWR7.vb" />
+    <Compile Include="tables\TWR\TWR8.vb" />
+    <Compile Include="tables\TWR\TWR9.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    if not exist "$(TargetDir)x86" md "$(TargetDir)x86"
+    xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\x86\*.*" "$(TargetDir)x86"
+    if not exist "$(TargetDir)amd64" md "$(TargetDir)amd64"
+    xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\amd64\*.*" "$(TargetDir)amd64"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

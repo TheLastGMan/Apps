@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="RPGCor" />
+    <title>@ViewBag.Title</title>
+
+    <link rel="icon" type="image/png" href="@Url.Content("~/content/favicon.png")" />
+    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="@Url.Content("~/content/favicon.ico")" />
+
+    @Styles.Render("~/css")
+    @Scripts.Render("~/prescript")
+</head>
+<body>
+    <div id="wrapper">
+        @RenderBody()
+    </div>
+
+    @Scripts.Render("~/postscript")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
