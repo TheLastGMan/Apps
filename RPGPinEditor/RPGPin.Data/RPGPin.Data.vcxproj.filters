@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\System">
+      <UniqueIdentifier>{76dc1dfa-da2f-43dc-8438-6d981465f16c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\System\IO">
+      <UniqueIdentifier>{88a7a58b-8964-4432-80fd-5d0b42ccf799}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\System">
+      <UniqueIdentifier>{4206a5f8-8978-4fc6-9744-18ce43a9e26e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\System\IO">
+      <UniqueIdentifier>{7bb87ce9-794c-4974-a162-df79023e4aa4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DateTime">
+      <UniqueIdentifier>{8e9629dd-c059-4f88-8998-7ececbdf74a1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Stream.cpp">
+      <Filter>Source Files\System\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="BinaryReader.cpp">
+      <Filter>Source Files\System\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="MemoryStream.cpp">
+      <Filter>Source Files\System\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceStrings.cpp">
+      <Filter>Source Files\System</Filter>
+    </ClCompile>
+    <ClCompile Include="BinaryWriter.cpp">
+      <Filter>Source Files\System\IO</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Stream.h">
+      <Filter>Header Files\System\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="BinaryReader.h">
+      <Filter>Header Files\System\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="SeekOrigin.h">
+      <Filter>Header Files\System\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="MemoryStream.h">
+      <Filter>Header Files\System\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="Exception.h">
+      <Filter>Header Files\System</Filter>
+    </ClInclude>
+    <ClInclude Include="ArgumentNullException.h">
+      <Filter>Header Files\System</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectDisposedException.h">
+      <Filter>Header Files\System</Filter>
+    </ClInclude>
+    <ClInclude Include="NotSupportedException.h">
+      <Filter>Header Files\System</Filter>
+    </ClInclude>
+    <ClInclude Include="InvalidOperationException.h">
+      <Filter>Header Files\System</Filter>
+    </ClInclude>
+    <ClInclude Include="ArgumentOutOfRangeException.h">
+      <Filter>Header Files\System</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceStrings.h">
+      <Filter>Header Files\System</Filter>
+    </ClInclude>
+    <ClInclude Include="IOException.h">
+      <Filter>Header Files\System</Filter>
+    </ClInclude>
+    <ClInclude Include="EndOfStreamException.h">
+      <Filter>Header Files\System</Filter>
+    </ClInclude>
+    <ClInclude Include="ArgumentException.h">
+      <Filter>Header Files\System</Filter>
+    </ClInclude>
+    <ClInclude Include="IDisposable.h">
+      <Filter>Header Files\System</Filter>
+    </ClInclude>
+    <ClInclude Include="Time.h">
+      <Filter>Header Files\DateTime</Filter>
+    </ClInclude>
+    <ClInclude Include="Date.h">
+      <Filter>Header Files\DateTime</Filter>
+    </ClInclude>
+    <ClInclude Include="DateTime.h">
+      <Filter>Header Files\DateTime</Filter>
+    </ClInclude>
+    <ClInclude Include="Types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Tuple.h">
+      <Filter>Header Files\System</Filter>
+    </ClInclude>
+    <ClInclude Include="BinaryWriter.h">
+      <Filter>Header Files\System\IO</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

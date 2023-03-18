@@ -1,0 +1,687 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ERM_ReportingModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityType Name="BUSINESS">
+          <Key>
+            <PropertyRef Name="BUSINESS_ID" />
+          </Key>
+          <Property Name="BUSINESS_ID" Type="int" Nullable="false" />
+          <Property Name="BUSINESS_CODE" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="BUSINESS_DESC" Type="varchar" MaxLength="100" />
+          <Property Name="INSERT_DT" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="COMPANY">
+          <Key>
+            <PropertyRef Name="COMPANY_CODE" />
+            <PropertyRef Name="DISTRIBUTION_TYPE_CODE" />
+          </Key>
+          <Property Name="COMPANY_CODE" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="COMPANY_NM" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="DISTRIBUTION_TYPE_CODE" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="OLD_COMPANY_CODE" Type="varchar" MaxLength="10" />
+          <Property Name="ACCT_ADMIN_CODE" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="ERM_BUSINESS_COMPANY_ASSOC">
+          <Key>
+            <PropertyRef Name="ERM_BUSINESS_COMPANY_ASSOC_SEQ_ID" />
+          </Key>
+          <Property Name="ERM_BUSINESS_COMPANY_ASSOC_SEQ_ID" Type="int" Nullable="false" />
+          <Property Name="COMPANY_CODE" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="ALT_COMP_CODE" Type="varchar" MaxLength="500" />
+          <Property Name="BUSINESS_ID" Type="int" Nullable="false" />
+          <Property Name="ERM_REPORT_SEGMENT_ID_GAAP" Type="int" Nullable="false" />
+          <Property Name="ERM_REPORT_SEGMENT_ID_CAPITAL" Type="int" Nullable="false" />
+          <Property Name="INSERT_DT" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ERM_FINANCIAL_COLUMN">
+          <Key>
+            <PropertyRef Name="ERM_FINANCIAL_COLUMN_SEQ_ID" />
+          </Key>
+          <Property Name="ERM_FINANCIAL_COLUMN_SEQ_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ERM_FINANCIAL_COLUMN_NM" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="ERM_FINANCIAL_COLUMN_HEADER" Type="varchar" MaxLength="100" />
+          <Property Name="ERM_FINANCIAL_BUSINESS_NM" Type="varchar" MaxLength="255" />
+          <Property Name="ERM_FINANCIAL_COLUMN_DESC" Type="varchar" MaxLength="500" />
+          <Property Name="CASHFLOW_BALANCE_FLAG" Type="varchar" MaxLength="3" />
+          <Property Name="INSERT_DT" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ERM_FINANCIAL_COLUMN_GROUP">
+          <Key>
+            <PropertyRef Name="ERM_FINANCIAL_COLUMN_GROUP_SEQ_ID" />
+          </Key>
+          <Property Name="ERM_FINANCIAL_COLUMN_GROUP_SEQ_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ERM_FINANCIAL_COLUMN_GROUP_NM" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="ERM_FINANCIAL_COLUMN_GROUP_DESC" Type="varchar" MaxLength="500" />
+          <Property Name="INSERT_DT" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ERM_FINANCIAL_COLUMN_GROUP_ASSOC">
+          <Key>
+            <PropertyRef Name="ERM_FINANCIAL_COLUMN_GROUP_ASSOC_SEQ_ID" />
+          </Key>
+          <Property Name="ERM_FINANCIAL_COLUMN_GROUP_ASSOC_SEQ_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ERM_FINANCIAL_COLUMN_SEQ_ID" Type="int" Nullable="false" />
+          <Property Name="ERM_FINANCIAL_COLUMN_GROUP_SEQ_ID" Type="int" Nullable="false" />
+          <Property Name="ERM_FINANCIAL_COLUMN_GROUP_ASSOC_DESC" Type="varchar" MaxLength="500" />
+          <Property Name="INSERT_DT" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ERM_FINANCIAL_VALUE">
+          <Key>
+            <PropertyRef Name="ERM_RUN_ID" />
+            <PropertyRef Name="ERM_SHOCK_GROUP_SEQ_ID" />
+            <PropertyRef Name="INSERT_DT" />
+          </Key>
+          <Property Name="ERM_RUN_ID" Type="int" Nullable="false" />
+          <Property Name="ERM_RUN_VERSION_ID" Type="int" Nullable="false" />
+          <Property Name="ERM_SHOCK_GROUP_SEQ_ID" Type="int" Nullable="false" />
+          <Property Name="ERM_PERIOD_TYPE_SEQ_ID" Type="int" />
+          <Property Name="ERM_PERIOD_ID" Type="int" Nullable="false" />
+          <Property Name="ERM_FINANCIAL_COLUMN_SEQ_ID" Type="int" />
+          <Property Name="ERM_FINANCIAL_COLUMN_VALUE" Type="decimal" Precision="38" Scale="10" />
+          <Property Name="INSERT_DT" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ERM_PERIOD_TYPE">
+          <Key>
+            <PropertyRef Name="ERM_PERIOD_TYPE_SEQ_ID" />
+          </Key>
+          <Property Name="ERM_PERIOD_TYPE_SEQ_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ERM_PERIOD_TYPE_DESC" Type="varchar" MaxLength="100" />
+          <Property Name="INSERT_DT" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ERM_REPORT_SEGMENT">
+          <Key>
+            <PropertyRef Name="ERM_REPORT_SEGMENT_ID" />
+          </Key>
+          <Property Name="ERM_REPORT_SEGMENT_ID" Type="int" Nullable="false" />
+          <Property Name="ERM_REPORT_SEGMENT_TYPE" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="ERM_REPORT_SEGMENT_TYPE_DESC" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="ERM_REPORT_SEGMENT_CODE" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="ERM_REPORT_SEGMENT_DESC" Type="varchar" MaxLength="255" />
+          <Property Name="INSERT_DT" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ERM_RUN">
+          <Key>
+            <PropertyRef Name="ERM_RUN_ID" />
+          </Key>
+          <Property Name="ERM_RUN_ID" Type="int" Nullable="false" />
+          <Property Name="ERM_RUN_VERSION_ID" Type="int" Nullable="false" />
+          <Property Name="ERM_RUN_DESC" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="VALUATION_DT" Type="datetime" Nullable="false" />
+          <Property Name="CREATE_DT" Type="datetime" Nullable="false" />
+          <Property Name="ERM_BUSINESS_COMPANY_ASSOC_SEQ_ID" Type="int" Nullable="false" />
+          <Property Name="INFORCE_FLAG" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="INSERT_DT" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ERM_SHOCK_GROUP">
+          <Key>
+            <PropertyRef Name="ERM_SHOCK_GROUP_SEQ_ID" />
+          </Key>
+          <Property Name="ERM_SHOCK_GROUP_SEQ_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SHOCK_SEQ_ID" Type="int" Nullable="false" />
+          <Property Name="PROJECTION_NM" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="ITERATION_NM" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="ERM_SHOCK_COUNT" Type="int" Nullable="false" />
+          <Property Name="INSERT_DT" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SHOCK">
+          <Key>
+            <PropertyRef Name="SHOCK_SEQ_ID" />
+          </Key>
+          <Property Name="SHOCK_SEQ_ID" Type="int" Nullable="false" />
+          <Property Name="SHOCK_TYPE_NM" Type="varchar" MaxLength="20" />
+          <Property Name="SHOCK_DESC" Type="varchar" MaxLength="50" />
+          <Property Name="EQUITY_IND" Type="smallint" />
+          <Property Name="TIME_IND" Type="smallint" />
+          <Property Name="ROLLFORWARD_IND" Type="smallint" />
+          <Property Name="DEFAULT_CALIBRATION_IND" Type="smallint" />
+          <Property Name="SHOCK_EXCHANGE_RATE_IND" Type="smallint" />
+          <Property Name="ERM_IND" Type="smallint" />
+        </EntityType>
+        <Association Name="fk_BUSINESS_ID_BUSINESS_BUSINESS_ID">
+          <End Role="BUSINESS" Type="Self.BUSINESS" Multiplicity="1" />
+          <End Role="ERM_BUSINESS_COMPANY_ASSOC" Type="Self.ERM_BUSINESS_COMPANY_ASSOC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BUSINESS">
+              <PropertyRef Name="BUSINESS_ID" />
+            </Principal>
+            <Dependent Role="ERM_BUSINESS_COMPANY_ASSOC">
+              <PropertyRef Name="BUSINESS_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ERM_FINANCIAL_COLUMN_SEQ_ID_ERM_FINANCIAL_COLUMN_ERM_FINANCIAL_COLUMN_SEQ_ID">
+          <End Role="ERM_FINANCIAL_COLUMN" Type="Self.ERM_FINANCIAL_COLUMN" Multiplicity="0..1" />
+          <End Role="ERM_FINANCIAL_VALUE" Type="Self.ERM_FINANCIAL_VALUE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ERM_FINANCIAL_COLUMN">
+              <PropertyRef Name="ERM_FINANCIAL_COLUMN_SEQ_ID" />
+            </Principal>
+            <Dependent Role="ERM_FINANCIAL_VALUE">
+              <PropertyRef Name="ERM_FINANCIAL_COLUMN_SEQ_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ERM_PERIOD_TYPE_SEQ_ID_ERM_PERIOD_TYPE_ERM_PERIOD_TYPE_SEQ_ID">
+          <End Role="ERM_PERIOD_TYPE" Type="Self.ERM_PERIOD_TYPE" Multiplicity="0..1" />
+          <End Role="ERM_FINANCIAL_VALUE" Type="Self.ERM_FINANCIAL_VALUE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ERM_PERIOD_TYPE">
+              <PropertyRef Name="ERM_PERIOD_TYPE_SEQ_ID" />
+            </Principal>
+            <Dependent Role="ERM_FINANCIAL_VALUE">
+              <PropertyRef Name="ERM_PERIOD_TYPE_SEQ_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_ERM_REPORT_SEGMENT_ID_CAPITAL_ERM_REPORT_SEGMENT_ERM_REPORT_SEGMENT_ID">
+          <End Role="ERM_REPORT_SEGMENT" Type="Self.ERM_REPORT_SEGMENT" Multiplicity="1" />
+          <End Role="ERM_BUSINESS_COMPANY_ASSOC" Type="Self.ERM_BUSINESS_COMPANY_ASSOC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ERM_REPORT_SEGMENT">
+              <PropertyRef Name="ERM_REPORT_SEGMENT_ID" />
+            </Principal>
+            <Dependent Role="ERM_BUSINESS_COMPANY_ASSOC">
+              <PropertyRef Name="ERM_REPORT_SEGMENT_ID_CAPITAL" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_ERM_REPORT_SEGMENT_ID_GAAP_ERM_REPORT_SEGMENT_ERM_REPORT_SEGMENT_ID">
+          <End Role="ERM_REPORT_SEGMENT" Type="Self.ERM_REPORT_SEGMENT" Multiplicity="1" />
+          <End Role="ERM_BUSINESS_COMPANY_ASSOC" Type="Self.ERM_BUSINESS_COMPANY_ASSOC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ERM_REPORT_SEGMENT">
+              <PropertyRef Name="ERM_REPORT_SEGMENT_ID" />
+            </Principal>
+            <Dependent Role="ERM_BUSINESS_COMPANY_ASSOC">
+              <PropertyRef Name="ERM_REPORT_SEGMENT_ID_GAAP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ERM_SHOCK_GROUP_SEQ_ID_ERM_SHOCK_GROUP_ERM_SHOCK_GROUP_SEQ_ID">
+          <End Role="ERM_SHOCK_GROUP" Type="Self.ERM_SHOCK_GROUP" Multiplicity="1" />
+          <End Role="ERM_FINANCIAL_VALUE" Type="Self.ERM_FINANCIAL_VALUE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ERM_SHOCK_GROUP">
+              <PropertyRef Name="ERM_SHOCK_GROUP_SEQ_ID" />
+            </Principal>
+            <Dependent Role="ERM_FINANCIAL_VALUE">
+              <PropertyRef Name="ERM_SHOCK_GROUP_SEQ_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ERM_ReportingModelStoreContainer">
+          <EntitySet Name="BUSINESS" EntityType="Self.BUSINESS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="COMPANY" EntityType="Self.COMPANY" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ERM_BUSINESS_COMPANY_ASSOC" EntityType="Self.ERM_BUSINESS_COMPANY_ASSOC" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ERM_FINANCIAL_COLUMN" EntityType="Self.ERM_FINANCIAL_COLUMN" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ERM_FINANCIAL_COLUMN_GROUP" EntityType="Self.ERM_FINANCIAL_COLUMN_GROUP" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ERM_FINANCIAL_COLUMN_GROUP_ASSOC" EntityType="Self.ERM_FINANCIAL_COLUMN_GROUP_ASSOC" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ERM_FINANCIAL_VALUE" EntityType="Self.ERM_FINANCIAL_VALUE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ERM_PERIOD_TYPE" EntityType="Self.ERM_PERIOD_TYPE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ERM_REPORT_SEGMENT" EntityType="Self.ERM_REPORT_SEGMENT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ERM_RUN" EntityType="Self.ERM_RUN" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ERM_SHOCK_GROUP" EntityType="Self.ERM_SHOCK_GROUP" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SHOCK" EntityType="Self.SHOCK" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="fk_BUSINESS_ID_BUSINESS_BUSINESS_ID" Association="Self.fk_BUSINESS_ID_BUSINESS_BUSINESS_ID">
+            <End Role="BUSINESS" EntitySet="BUSINESS" />
+            <End Role="ERM_BUSINESS_COMPANY_ASSOC" EntitySet="ERM_BUSINESS_COMPANY_ASSOC" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ERM_FINANCIAL_COLUMN_SEQ_ID_ERM_FINANCIAL_COLUMN_ERM_FINANCIAL_COLUMN_SEQ_ID" Association="Self.FK_ERM_FINANCIAL_COLUMN_SEQ_ID_ERM_FINANCIAL_COLUMN_ERM_FINANCIAL_COLUMN_SEQ_ID">
+            <End Role="ERM_FINANCIAL_COLUMN" EntitySet="ERM_FINANCIAL_COLUMN" />
+            <End Role="ERM_FINANCIAL_VALUE" EntitySet="ERM_FINANCIAL_VALUE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ERM_PERIOD_TYPE_SEQ_ID_ERM_PERIOD_TYPE_ERM_PERIOD_TYPE_SEQ_ID" Association="Self.FK_ERM_PERIOD_TYPE_SEQ_ID_ERM_PERIOD_TYPE_ERM_PERIOD_TYPE_SEQ_ID">
+            <End Role="ERM_PERIOD_TYPE" EntitySet="ERM_PERIOD_TYPE" />
+            <End Role="ERM_FINANCIAL_VALUE" EntitySet="ERM_FINANCIAL_VALUE" />
+          </AssociationSet>
+          <AssociationSet Name="fk_ERM_REPORT_SEGMENT_ID_CAPITAL_ERM_REPORT_SEGMENT_ERM_REPORT_SEGMENT_ID" Association="Self.fk_ERM_REPORT_SEGMENT_ID_CAPITAL_ERM_REPORT_SEGMENT_ERM_REPORT_SEGMENT_ID">
+            <End Role="ERM_REPORT_SEGMENT" EntitySet="ERM_REPORT_SEGMENT" />
+            <End Role="ERM_BUSINESS_COMPANY_ASSOC" EntitySet="ERM_BUSINESS_COMPANY_ASSOC" />
+          </AssociationSet>
+          <AssociationSet Name="fk_ERM_REPORT_SEGMENT_ID_GAAP_ERM_REPORT_SEGMENT_ERM_REPORT_SEGMENT_ID" Association="Self.fk_ERM_REPORT_SEGMENT_ID_GAAP_ERM_REPORT_SEGMENT_ERM_REPORT_SEGMENT_ID">
+            <End Role="ERM_REPORT_SEGMENT" EntitySet="ERM_REPORT_SEGMENT" />
+            <End Role="ERM_BUSINESS_COMPANY_ASSOC" EntitySet="ERM_BUSINESS_COMPANY_ASSOC" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ERM_SHOCK_GROUP_SEQ_ID_ERM_SHOCK_GROUP_ERM_SHOCK_GROUP_SEQ_ID" Association="Self.FK_ERM_SHOCK_GROUP_SEQ_ID_ERM_SHOCK_GROUP_ERM_SHOCK_GROUP_SEQ_ID">
+            <End Role="ERM_SHOCK_GROUP" EntitySet="ERM_SHOCK_GROUP" />
+            <End Role="ERM_FINANCIAL_VALUE" EntitySet="ERM_FINANCIAL_VALUE" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ERM_ReportingModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntityType Name="BUSINESS">
+          <Key>
+            <PropertyRef Name="BUSINESS_ID" />
+          </Key>
+          <Property Name="BUSINESS_ID" Type="Int32" Nullable="false" />
+          <Property Name="BUSINESS_CODE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BUSINESS_DESC" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="INSERT_DT" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="ERM_BUSINESS_COMPANY_ASSOC" Relationship="Self.fk_BUSINESS_ID_BUSINESS_BUSINESS_ID" FromRole="BUSINESS" ToRole="ERM_BUSINESS_COMPANY_ASSOC" />
+        </EntityType>
+        <EntityType Name="COMPANY">
+          <Key>
+            <PropertyRef Name="COMPANY_CODE" />
+            <PropertyRef Name="DISTRIBUTION_TYPE_CODE" />
+          </Key>
+          <Property Name="COMPANY_CODE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="COMPANY_NM" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DISTRIBUTION_TYPE_CODE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="OLD_COMPANY_CODE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="ACCT_ADMIN_CODE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="ERM_BUSINESS_COMPANY_ASSOC">
+          <Key>
+            <PropertyRef Name="ERM_BUSINESS_COMPANY_ASSOC_SEQ_ID" />
+          </Key>
+          <Property Name="ERM_BUSINESS_COMPANY_ASSOC_SEQ_ID" Type="Int32" Nullable="false" />
+          <Property Name="COMPANY_CODE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ALT_COMP_CODE" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="BUSINESS_ID" Type="Int32" Nullable="false" />
+          <Property Name="ERM_REPORT_SEGMENT_ID_GAAP" Type="Int32" Nullable="false" />
+          <Property Name="ERM_REPORT_SEGMENT_ID_CAPITAL" Type="Int32" Nullable="false" />
+          <Property Name="INSERT_DT" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="BUSINESS" Relationship="Self.fk_BUSINESS_ID_BUSINESS_BUSINESS_ID" FromRole="ERM_BUSINESS_COMPANY_ASSOC" ToRole="BUSINESS" />
+          <NavigationProperty Name="ERM_REPORT_SEGMENT" Relationship="Self.fk_ERM_REPORT_SEGMENT_ID_CAPITAL_ERM_REPORT_SEGMENT_ERM_REPORT_SEGMENT_ID" FromRole="ERM_BUSINESS_COMPANY_ASSOC" ToRole="ERM_REPORT_SEGMENT" />
+          <NavigationProperty Name="ERM_REPORT_SEGMENT1" Relationship="Self.fk_ERM_REPORT_SEGMENT_ID_GAAP_ERM_REPORT_SEGMENT_ERM_REPORT_SEGMENT_ID" FromRole="ERM_BUSINESS_COMPANY_ASSOC" ToRole="ERM_REPORT_SEGMENT" />
+        </EntityType>
+        <EntityType Name="ERM_FINANCIAL_COLUMN">
+          <Key>
+            <PropertyRef Name="ERM_FINANCIAL_COLUMN_SEQ_ID" />
+          </Key>
+          <Property Name="ERM_FINANCIAL_COLUMN_SEQ_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ERM_FINANCIAL_COLUMN_NM" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ERM_FINANCIAL_COLUMN_HEADER" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ERM_FINANCIAL_BUSINESS_NM" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="ERM_FINANCIAL_COLUMN_DESC" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="CASHFLOW_BALANCE_FLAG" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="INSERT_DT" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="ERM_FINANCIAL_VALUE" Relationship="ERM_ReportingModel.FK_ERM_FINANCIAL_COLUMN_SEQ_ID_ERM_FINANCIAL_COLUMN_ERM_FINANCIAL_COLUMN_SEQ_ID" FromRole="ERM_FINANCIAL_COLUMN" ToRole="ERM_FINANCIAL_VALUE" />
+        </EntityType>
+        <EntityType Name="ERM_FINANCIAL_COLUMN_GROUP">
+          <Key>
+            <PropertyRef Name="ERM_FINANCIAL_COLUMN_GROUP_SEQ_ID" />
+          </Key>
+          <Property Name="ERM_FINANCIAL_COLUMN_GROUP_SEQ_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ERM_FINANCIAL_COLUMN_GROUP_NM" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ERM_FINANCIAL_COLUMN_GROUP_DESC" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="INSERT_DT" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="ERM_FINANCIAL_COLUMN_GROUP_ASSOC">
+          <Key>
+            <PropertyRef Name="ERM_FINANCIAL_COLUMN_GROUP_ASSOC_SEQ_ID" />
+          </Key>
+          <Property Name="ERM_FINANCIAL_COLUMN_GROUP_ASSOC_SEQ_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ERM_FINANCIAL_COLUMN_SEQ_ID" Type="Int32" Nullable="false" />
+          <Property Name="ERM_FINANCIAL_COLUMN_GROUP_SEQ_ID" Type="Int32" Nullable="false" />
+          <Property Name="ERM_FINANCIAL_COLUMN_GROUP_ASSOC_DESC" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="INSERT_DT" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="ERM_PERIOD_TYPE">
+          <Key>
+            <PropertyRef Name="ERM_PERIOD_TYPE_SEQ_ID" />
+          </Key>
+          <Property Name="ERM_PERIOD_TYPE_SEQ_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ERM_PERIOD_TYPE_DESC" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="INSERT_DT" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="ERM_FINANCIAL_VALUE" Relationship="ERM_ReportingModel.FK_ERM_PERIOD_TYPE_SEQ_ID_ERM_PERIOD_TYPE_ERM_PERIOD_TYPE_SEQ_ID" FromRole="ERM_PERIOD_TYPE" ToRole="ERM_FINANCIAL_VALUE" />
+        </EntityType>
+        <EntityType Name="ERM_REPORT_SEGMENT">
+          <Key>
+            <PropertyRef Name="ERM_REPORT_SEGMENT_ID" />
+          </Key>
+          <Property Name="ERM_REPORT_SEGMENT_ID" Type="Int32" Nullable="false" />
+          <Property Name="ERM_REPORT_SEGMENT_TYPE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ERM_REPORT_SEGMENT_TYPE_DESC" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ERM_REPORT_SEGMENT_CODE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ERM_REPORT_SEGMENT_DESC" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="INSERT_DT" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="ERM_BUSINESS_COMPANY_ASSOC" Relationship="Self.fk_ERM_REPORT_SEGMENT_ID_CAPITAL_ERM_REPORT_SEGMENT_ERM_REPORT_SEGMENT_ID" FromRole="ERM_REPORT_SEGMENT" ToRole="ERM_BUSINESS_COMPANY_ASSOC" />
+          <NavigationProperty Name="ERM_BUSINESS_COMPANY_ASSOC1" Relationship="Self.fk_ERM_REPORT_SEGMENT_ID_GAAP_ERM_REPORT_SEGMENT_ERM_REPORT_SEGMENT_ID" FromRole="ERM_REPORT_SEGMENT" ToRole="ERM_BUSINESS_COMPANY_ASSOC" />
+        </EntityType>
+        <EntityType Name="ERM_RUN">
+          <Key>
+            <PropertyRef Name="ERM_RUN_ID" />
+          </Key>
+          <Property Name="ERM_RUN_ID" Type="Int32" Nullable="false" />
+          <Property Name="ERM_RUN_VERSION_ID" Type="Int32" Nullable="false" />
+          <Property Name="ERM_RUN_DESC" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="VALUATION_DT" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CREATE_DT" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ERM_BUSINESS_COMPANY_ASSOC_SEQ_ID" Type="Int32" Nullable="false" />
+          <Property Name="INFORCE_FLAG" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="INSERT_DT" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="ERM_SHOCK_GROUP">
+          <Key>
+            <PropertyRef Name="ERM_SHOCK_GROUP_SEQ_ID" />
+          </Key>
+          <Property Name="ERM_SHOCK_GROUP_SEQ_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SHOCK_SEQ_ID" Type="Int32" Nullable="false" />
+          <Property Name="PROJECTION_NM" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ITERATION_NM" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ERM_SHOCK_COUNT" Type="Int32" Nullable="false" />
+          <Property Name="INSERT_DT" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="ERM_FINANCIAL_VALUE" Relationship="ERM_ReportingModel.FK_ERM_SHOCK_GROUP_SEQ_ID_ERM_SHOCK_GROUP_ERM_SHOCK_GROUP_SEQ_ID" FromRole="ERM_SHOCK_GROUP" ToRole="ERM_FINANCIAL_VALUE" />
+        </EntityType>
+        <EntityType Name="SHOCK">
+          <Key>
+            <PropertyRef Name="SHOCK_SEQ_ID" />
+          </Key>
+          <Property Name="SHOCK_SEQ_ID" Type="Int32" Nullable="false" />
+          <Property Name="SHOCK_TYPE_NM" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="SHOCK_DESC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EQUITY_IND" Type="Int16" />
+          <Property Name="TIME_IND" Type="Int16" />
+          <Property Name="ROLLFORWARD_IND" Type="Int16" />
+          <Property Name="DEFAULT_CALIBRATION_IND" Type="Int16" />
+          <Property Name="SHOCK_EXCHANGE_RATE_IND" Type="Int16" />
+          <Property Name="ERM_IND" Type="Int16" />
+        </EntityType>
+        <Association Name="fk_BUSINESS_ID_BUSINESS_BUSINESS_ID">
+          <End Role="BUSINESS" Type="Self.BUSINESS" Multiplicity="1" />
+          <End Role="ERM_BUSINESS_COMPANY_ASSOC" Type="Self.ERM_BUSINESS_COMPANY_ASSOC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BUSINESS">
+              <PropertyRef Name="BUSINESS_ID" />
+            </Principal>
+            <Dependent Role="ERM_BUSINESS_COMPANY_ASSOC">
+              <PropertyRef Name="BUSINESS_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_ERM_REPORT_SEGMENT_ID_CAPITAL_ERM_REPORT_SEGMENT_ERM_REPORT_SEGMENT_ID">
+          <End Role="ERM_REPORT_SEGMENT" Type="Self.ERM_REPORT_SEGMENT" Multiplicity="1" />
+          <End Role="ERM_BUSINESS_COMPANY_ASSOC" Type="Self.ERM_BUSINESS_COMPANY_ASSOC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ERM_REPORT_SEGMENT">
+              <PropertyRef Name="ERM_REPORT_SEGMENT_ID" />
+            </Principal>
+            <Dependent Role="ERM_BUSINESS_COMPANY_ASSOC">
+              <PropertyRef Name="ERM_REPORT_SEGMENT_ID_CAPITAL" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_ERM_REPORT_SEGMENT_ID_GAAP_ERM_REPORT_SEGMENT_ERM_REPORT_SEGMENT_ID">
+          <End Role="ERM_REPORT_SEGMENT" Type="Self.ERM_REPORT_SEGMENT" Multiplicity="1" />
+          <End Role="ERM_BUSINESS_COMPANY_ASSOC" Type="Self.ERM_BUSINESS_COMPANY_ASSOC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ERM_REPORT_SEGMENT">
+              <PropertyRef Name="ERM_REPORT_SEGMENT_ID" />
+            </Principal>
+            <Dependent Role="ERM_BUSINESS_COMPANY_ASSOC">
+              <PropertyRef Name="ERM_REPORT_SEGMENT_ID_GAAP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ERMReportingConnection" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="BUSINESSes" EntityType="Self.BUSINESS" />
+          <EntitySet Name="COMPANies" EntityType="Self.COMPANY" />
+          <EntitySet Name="ERM_BUSINESS_COMPANY_ASSOC" EntityType="Self.ERM_BUSINESS_COMPANY_ASSOC" />
+          <EntitySet Name="ERM_FINANCIAL_COLUMN" EntityType="Self.ERM_FINANCIAL_COLUMN" />
+          <EntitySet Name="ERM_FINANCIAL_COLUMN_GROUP" EntityType="Self.ERM_FINANCIAL_COLUMN_GROUP" />
+          <EntitySet Name="ERM_FINANCIAL_COLUMN_GROUP_ASSOC" EntityType="Self.ERM_FINANCIAL_COLUMN_GROUP_ASSOC" />
+          <EntitySet Name="ERM_PERIOD_TYPE" EntityType="Self.ERM_PERIOD_TYPE" />
+          <EntitySet Name="ERM_REPORT_SEGMENT" EntityType="Self.ERM_REPORT_SEGMENT" />
+          <EntitySet Name="ERM_RUN" EntityType="Self.ERM_RUN" />
+          <EntitySet Name="ERM_SHOCK_GROUP" EntityType="Self.ERM_SHOCK_GROUP" />
+          <EntitySet Name="SHOCKs" EntityType="Self.SHOCK" />
+          <AssociationSet Name="fk_BUSINESS_ID_BUSINESS_BUSINESS_ID" Association="Self.fk_BUSINESS_ID_BUSINESS_BUSINESS_ID">
+            <End Role="BUSINESS" EntitySet="BUSINESSes" />
+            <End Role="ERM_BUSINESS_COMPANY_ASSOC" EntitySet="ERM_BUSINESS_COMPANY_ASSOC" />
+          </AssociationSet>
+          <AssociationSet Name="fk_ERM_REPORT_SEGMENT_ID_CAPITAL_ERM_REPORT_SEGMENT_ERM_REPORT_SEGMENT_ID" Association="Self.fk_ERM_REPORT_SEGMENT_ID_CAPITAL_ERM_REPORT_SEGMENT_ERM_REPORT_SEGMENT_ID">
+            <End Role="ERM_REPORT_SEGMENT" EntitySet="ERM_REPORT_SEGMENT" />
+            <End Role="ERM_BUSINESS_COMPANY_ASSOC" EntitySet="ERM_BUSINESS_COMPANY_ASSOC" />
+          </AssociationSet>
+          <AssociationSet Name="fk_ERM_REPORT_SEGMENT_ID_GAAP_ERM_REPORT_SEGMENT_ERM_REPORT_SEGMENT_ID" Association="Self.fk_ERM_REPORT_SEGMENT_ID_GAAP_ERM_REPORT_SEGMENT_ERM_REPORT_SEGMENT_ID">
+            <End Role="ERM_REPORT_SEGMENT" EntitySet="ERM_REPORT_SEGMENT" />
+            <End Role="ERM_BUSINESS_COMPANY_ASSOC" EntitySet="ERM_BUSINESS_COMPANY_ASSOC" />
+          </AssociationSet>
+          <EntitySet Name="ERM_FINANCIAL_VALUE" EntityType="ERM_ReportingModel.ERM_FINANCIAL_VALUE" />
+          <AssociationSet Name="FK_ERM_FINANCIAL_COLUMN_SEQ_ID_ERM_FINANCIAL_COLUMN_ERM_FINANCIAL_COLUMN_SEQ_ID" Association="ERM_ReportingModel.FK_ERM_FINANCIAL_COLUMN_SEQ_ID_ERM_FINANCIAL_COLUMN_ERM_FINANCIAL_COLUMN_SEQ_ID">
+            <End Role="ERM_FINANCIAL_COLUMN" EntitySet="ERM_FINANCIAL_COLUMN" />
+            <End Role="ERM_FINANCIAL_VALUE" EntitySet="ERM_FINANCIAL_VALUE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ERM_PERIOD_TYPE_SEQ_ID_ERM_PERIOD_TYPE_ERM_PERIOD_TYPE_SEQ_ID" Association="ERM_ReportingModel.FK_ERM_PERIOD_TYPE_SEQ_ID_ERM_PERIOD_TYPE_ERM_PERIOD_TYPE_SEQ_ID">
+            <End Role="ERM_PERIOD_TYPE" EntitySet="ERM_PERIOD_TYPE" />
+            <End Role="ERM_FINANCIAL_VALUE" EntitySet="ERM_FINANCIAL_VALUE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ERM_SHOCK_GROUP_SEQ_ID_ERM_SHOCK_GROUP_ERM_SHOCK_GROUP_SEQ_ID" Association="ERM_ReportingModel.FK_ERM_SHOCK_GROUP_SEQ_ID_ERM_SHOCK_GROUP_ERM_SHOCK_GROUP_SEQ_ID">
+            <End Role="ERM_SHOCK_GROUP" EntitySet="ERM_SHOCK_GROUP" />
+            <End Role="ERM_FINANCIAL_VALUE" EntitySet="ERM_FINANCIAL_VALUE" />
+          </AssociationSet>
+          </EntityContainer>
+        <EntityType Name="ERM_FINANCIAL_VALUE">
+          <Key>
+            <PropertyRef Name="ERM_RUN_ID" />
+            <PropertyRef Name="ERM_SHOCK_GROUP_SEQ_ID" />
+            <PropertyRef Name="INSERT_DT" />
+          </Key>
+          <Property Name="ERM_RUN_ID" Type="Int32" Nullable="false" />
+          <Property Name="ERM_RUN_VERSION_ID" Type="Int32" Nullable="false" />
+          <Property Name="ERM_SHOCK_GROUP_SEQ_ID" Type="Int32" Nullable="false" />
+          <Property Name="ERM_PERIOD_TYPE_SEQ_ID" Type="Int32" />
+          <Property Name="ERM_PERIOD_ID" Type="Int32" Nullable="false" />
+          <Property Name="ERM_FINANCIAL_COLUMN_SEQ_ID" Type="Int32" />
+          <Property Name="ERM_FINANCIAL_COLUMN_VALUE" Type="Decimal" Precision="38" Scale="10" />
+          <Property Name="INSERT_DT" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="ERM_FINANCIAL_COLUMN" Relationship="ERM_ReportingModel.FK_ERM_FINANCIAL_COLUMN_SEQ_ID_ERM_FINANCIAL_COLUMN_ERM_FINANCIAL_COLUMN_SEQ_ID" FromRole="ERM_FINANCIAL_VALUE" ToRole="ERM_FINANCIAL_COLUMN" />
+          <NavigationProperty Name="ERM_PERIOD_TYPE" Relationship="ERM_ReportingModel.FK_ERM_PERIOD_TYPE_SEQ_ID_ERM_PERIOD_TYPE_ERM_PERIOD_TYPE_SEQ_ID" FromRole="ERM_FINANCIAL_VALUE" ToRole="ERM_PERIOD_TYPE" />
+          <NavigationProperty Name="ERM_SHOCK_GROUP" Relationship="ERM_ReportingModel.FK_ERM_SHOCK_GROUP_SEQ_ID_ERM_SHOCK_GROUP_ERM_SHOCK_GROUP_SEQ_ID" FromRole="ERM_FINANCIAL_VALUE" ToRole="ERM_SHOCK_GROUP" />
+        </EntityType>
+        <Association Name="FK_ERM_FINANCIAL_COLUMN_SEQ_ID_ERM_FINANCIAL_COLUMN_ERM_FINANCIAL_COLUMN_SEQ_ID">
+          <End Type="ERM_ReportingModel.ERM_FINANCIAL_COLUMN" Role="ERM_FINANCIAL_COLUMN" Multiplicity="0..1" />
+          <End Type="ERM_ReportingModel.ERM_FINANCIAL_VALUE" Role="ERM_FINANCIAL_VALUE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ERM_FINANCIAL_COLUMN">
+              <PropertyRef Name="ERM_FINANCIAL_COLUMN_SEQ_ID" />
+            </Principal>
+            <Dependent Role="ERM_FINANCIAL_VALUE">
+              <PropertyRef Name="ERM_FINANCIAL_COLUMN_SEQ_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ERM_PERIOD_TYPE_SEQ_ID_ERM_PERIOD_TYPE_ERM_PERIOD_TYPE_SEQ_ID">
+          <End Type="ERM_ReportingModel.ERM_PERIOD_TYPE" Role="ERM_PERIOD_TYPE" Multiplicity="0..1" />
+          <End Type="ERM_ReportingModel.ERM_FINANCIAL_VALUE" Role="ERM_FINANCIAL_VALUE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ERM_PERIOD_TYPE">
+              <PropertyRef Name="ERM_PERIOD_TYPE_SEQ_ID" />
+            </Principal>
+            <Dependent Role="ERM_FINANCIAL_VALUE">
+              <PropertyRef Name="ERM_PERIOD_TYPE_SEQ_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ERM_SHOCK_GROUP_SEQ_ID_ERM_SHOCK_GROUP_ERM_SHOCK_GROUP_SEQ_ID">
+          <End Type="ERM_ReportingModel.ERM_SHOCK_GROUP" Role="ERM_SHOCK_GROUP" Multiplicity="1" />
+          <End Type="ERM_ReportingModel.ERM_FINANCIAL_VALUE" Role="ERM_FINANCIAL_VALUE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ERM_SHOCK_GROUP">
+              <PropertyRef Name="ERM_SHOCK_GROUP_SEQ_ID" />
+            </Principal>
+            <Dependent Role="ERM_FINANCIAL_VALUE">
+              <PropertyRef Name="ERM_SHOCK_GROUP_SEQ_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ERM_ReportingModelStoreContainer" CdmEntityContainer="ERMReportingConnection">
+          <EntitySetMapping Name="BUSINESSes">
+            <EntityTypeMapping TypeName="ERM_ReportingModel.BUSINESS">
+              <MappingFragment StoreEntitySet="BUSINESS">
+                <ScalarProperty Name="BUSINESS_ID" ColumnName="BUSINESS_ID" />
+                <ScalarProperty Name="BUSINESS_CODE" ColumnName="BUSINESS_CODE" />
+                <ScalarProperty Name="BUSINESS_DESC" ColumnName="BUSINESS_DESC" />
+                <ScalarProperty Name="INSERT_DT" ColumnName="INSERT_DT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="COMPANies">
+            <EntityTypeMapping TypeName="ERM_ReportingModel.COMPANY">
+              <MappingFragment StoreEntitySet="COMPANY">
+                <ScalarProperty Name="COMPANY_CODE" ColumnName="COMPANY_CODE" />
+                <ScalarProperty Name="COMPANY_NM" ColumnName="COMPANY_NM" />
+                <ScalarProperty Name="DISTRIBUTION_TYPE_CODE" ColumnName="DISTRIBUTION_TYPE_CODE" />
+                <ScalarProperty Name="OLD_COMPANY_CODE" ColumnName="OLD_COMPANY_CODE" />
+                <ScalarProperty Name="ACCT_ADMIN_CODE" ColumnName="ACCT_ADMIN_CODE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ERM_BUSINESS_COMPANY_ASSOC">
+            <EntityTypeMapping TypeName="ERM_ReportingModel.ERM_BUSINESS_COMPANY_ASSOC">
+              <MappingFragment StoreEntitySet="ERM_BUSINESS_COMPANY_ASSOC">
+                <ScalarProperty Name="ERM_BUSINESS_COMPANY_ASSOC_SEQ_ID" ColumnName="ERM_BUSINESS_COMPANY_ASSOC_SEQ_ID" />
+                <ScalarProperty Name="COMPANY_CODE" ColumnName="COMPANY_CODE" />
+                <ScalarProperty Name="ALT_COMP_CODE" ColumnName="ALT_COMP_CODE" />
+                <ScalarProperty Name="BUSINESS_ID" ColumnName="BUSINESS_ID" />
+                <ScalarProperty Name="ERM_REPORT_SEGMENT_ID_GAAP" ColumnName="ERM_REPORT_SEGMENT_ID_GAAP" />
+                <ScalarProperty Name="ERM_REPORT_SEGMENT_ID_CAPITAL" ColumnName="ERM_REPORT_SEGMENT_ID_CAPITAL" />
+                <ScalarProperty Name="INSERT_DT" ColumnName="INSERT_DT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ERM_FINANCIAL_COLUMN">
+            <EntityTypeMapping TypeName="ERM_ReportingModel.ERM_FINANCIAL_COLUMN">
+              <MappingFragment StoreEntitySet="ERM_FINANCIAL_COLUMN">
+                <ScalarProperty Name="ERM_FINANCIAL_COLUMN_SEQ_ID" ColumnName="ERM_FINANCIAL_COLUMN_SEQ_ID" />
+                <ScalarProperty Name="ERM_FINANCIAL_COLUMN_NM" ColumnName="ERM_FINANCIAL_COLUMN_NM" />
+                <ScalarProperty Name="ERM_FINANCIAL_COLUMN_HEADER" ColumnName="ERM_FINANCIAL_COLUMN_HEADER" />
+                <ScalarProperty Name="ERM_FINANCIAL_BUSINESS_NM" ColumnName="ERM_FINANCIAL_BUSINESS_NM" />
+                <ScalarProperty Name="ERM_FINANCIAL_COLUMN_DESC" ColumnName="ERM_FINANCIAL_COLUMN_DESC" />
+                <ScalarProperty Name="CASHFLOW_BALANCE_FLAG" ColumnName="CASHFLOW_BALANCE_FLAG" />
+                <ScalarProperty Name="INSERT_DT" ColumnName="INSERT_DT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ERM_FINANCIAL_COLUMN_GROUP">
+            <EntityTypeMapping TypeName="ERM_ReportingModel.ERM_FINANCIAL_COLUMN_GROUP">
+              <MappingFragment StoreEntitySet="ERM_FINANCIAL_COLUMN_GROUP">
+                <ScalarProperty Name="ERM_FINANCIAL_COLUMN_GROUP_SEQ_ID" ColumnName="ERM_FINANCIAL_COLUMN_GROUP_SEQ_ID" />
+                <ScalarProperty Name="ERM_FINANCIAL_COLUMN_GROUP_NM" ColumnName="ERM_FINANCIAL_COLUMN_GROUP_NM" />
+                <ScalarProperty Name="ERM_FINANCIAL_COLUMN_GROUP_DESC" ColumnName="ERM_FINANCIAL_COLUMN_GROUP_DESC" />
+                <ScalarProperty Name="INSERT_DT" ColumnName="INSERT_DT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ERM_FINANCIAL_COLUMN_GROUP_ASSOC">
+            <EntityTypeMapping TypeName="ERM_ReportingModel.ERM_FINANCIAL_COLUMN_GROUP_ASSOC">
+              <MappingFragment StoreEntitySet="ERM_FINANCIAL_COLUMN_GROUP_ASSOC">
+                <ScalarProperty Name="ERM_FINANCIAL_COLUMN_GROUP_ASSOC_SEQ_ID" ColumnName="ERM_FINANCIAL_COLUMN_GROUP_ASSOC_SEQ_ID" />
+                <ScalarProperty Name="ERM_FINANCIAL_COLUMN_SEQ_ID" ColumnName="ERM_FINANCIAL_COLUMN_SEQ_ID" />
+                <ScalarProperty Name="ERM_FINANCIAL_COLUMN_GROUP_SEQ_ID" ColumnName="ERM_FINANCIAL_COLUMN_GROUP_SEQ_ID" />
+                <ScalarProperty Name="ERM_FINANCIAL_COLUMN_GROUP_ASSOC_DESC" ColumnName="ERM_FINANCIAL_COLUMN_GROUP_ASSOC_DESC" />
+                <ScalarProperty Name="INSERT_DT" ColumnName="INSERT_DT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ERM_PERIOD_TYPE">
+            <EntityTypeMapping TypeName="ERM_ReportingModel.ERM_PERIOD_TYPE">
+              <MappingFragment StoreEntitySet="ERM_PERIOD_TYPE">
+                <ScalarProperty Name="ERM_PERIOD_TYPE_SEQ_ID" ColumnName="ERM_PERIOD_TYPE_SEQ_ID" />
+                <ScalarProperty Name="ERM_PERIOD_TYPE_DESC" ColumnName="ERM_PERIOD_TYPE_DESC" />
+                <ScalarProperty Name="INSERT_DT" ColumnName="INSERT_DT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ERM_REPORT_SEGMENT">
+            <EntityTypeMapping TypeName="ERM_ReportingModel.ERM_REPORT_SEGMENT">
+              <MappingFragment StoreEntitySet="ERM_REPORT_SEGMENT">
+                <ScalarProperty Name="ERM_REPORT_SEGMENT_ID" ColumnName="ERM_REPORT_SEGMENT_ID" />
+                <ScalarProperty Name="ERM_REPORT_SEGMENT_TYPE" ColumnName="ERM_REPORT_SEGMENT_TYPE" />
+                <ScalarProperty Name="ERM_REPORT_SEGMENT_TYPE_DESC" ColumnName="ERM_REPORT_SEGMENT_TYPE_DESC" />
+                <ScalarProperty Name="ERM_REPORT_SEGMENT_CODE" ColumnName="ERM_REPORT_SEGMENT_CODE" />
+                <ScalarProperty Name="ERM_REPORT_SEGMENT_DESC" ColumnName="ERM_REPORT_SEGMENT_DESC" />
+                <ScalarProperty Name="INSERT_DT" ColumnName="INSERT_DT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ERM_RUN">
+            <EntityTypeMapping TypeName="ERM_ReportingModel.ERM_RUN">
+              <MappingFragment StoreEntitySet="ERM_RUN">
+                <ScalarProperty Name="ERM_RUN_ID" ColumnName="ERM_RUN_ID" />
+                <ScalarProperty Name="ERM_RUN_VERSION_ID" ColumnName="ERM_RUN_VERSION_ID" />
+                <ScalarProperty Name="ERM_RUN_DESC" ColumnName="ERM_RUN_DESC" />
+                <ScalarProperty Name="VALUATION_DT" ColumnName="VALUATION_DT" />
+                <ScalarProperty Name="CREATE_DT" ColumnName="CREATE_DT" />
+                <ScalarProperty Name="ERM_BUSINESS_COMPANY_ASSOC_SEQ_ID" ColumnName="ERM_BUSINESS_COMPANY_ASSOC_SEQ_ID" />
+                <ScalarProperty Name="INFORCE_FLAG" ColumnName="INFORCE_FLAG" />
+                <ScalarProperty Name="INSERT_DT" ColumnName="INSERT_DT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ERM_SHOCK_GROUP">
+            <EntityTypeMapping TypeName="ERM_ReportingModel.ERM_SHOCK_GROUP">
+              <MappingFragment StoreEntitySet="ERM_SHOCK_GROUP">
+                <ScalarProperty Name="ERM_SHOCK_GROUP_SEQ_ID" ColumnName="ERM_SHOCK_GROUP_SEQ_ID" />
+                <ScalarProperty Name="SHOCK_SEQ_ID" ColumnName="SHOCK_SEQ_ID" />
+                <ScalarProperty Name="PROJECTION_NM" ColumnName="PROJECTION_NM" />
+                <ScalarProperty Name="ITERATION_NM" ColumnName="ITERATION_NM" />
+                <ScalarProperty Name="ERM_SHOCK_COUNT" ColumnName="ERM_SHOCK_COUNT" />
+                <ScalarProperty Name="INSERT_DT" ColumnName="INSERT_DT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SHOCKs">
+            <EntityTypeMapping TypeName="ERM_ReportingModel.SHOCK">
+              <MappingFragment StoreEntitySet="SHOCK">
+                <ScalarProperty Name="SHOCK_SEQ_ID" ColumnName="SHOCK_SEQ_ID" />
+                <ScalarProperty Name="SHOCK_TYPE_NM" ColumnName="SHOCK_TYPE_NM" />
+                <ScalarProperty Name="SHOCK_DESC" ColumnName="SHOCK_DESC" />
+                <ScalarProperty Name="EQUITY_IND" ColumnName="EQUITY_IND" />
+                <ScalarProperty Name="TIME_IND" ColumnName="TIME_IND" />
+                <ScalarProperty Name="ROLLFORWARD_IND" ColumnName="ROLLFORWARD_IND" />
+                <ScalarProperty Name="DEFAULT_CALIBRATION_IND" ColumnName="DEFAULT_CALIBRATION_IND" />
+                <ScalarProperty Name="SHOCK_EXCHANGE_RATE_IND" ColumnName="SHOCK_EXCHANGE_RATE_IND" />
+                <ScalarProperty Name="ERM_IND" ColumnName="ERM_IND" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ERM_FINANCIAL_VALUE">
+            <EntityTypeMapping TypeName="ERM_ReportingModel.ERM_FINANCIAL_VALUE">
+              <MappingFragment StoreEntitySet="ERM_FINANCIAL_VALUE">
+                <ScalarProperty Name="INSERT_DT" ColumnName="INSERT_DT" />
+                <ScalarProperty Name="ERM_FINANCIAL_COLUMN_VALUE" ColumnName="ERM_FINANCIAL_COLUMN_VALUE" />
+                <ScalarProperty Name="ERM_FINANCIAL_COLUMN_SEQ_ID" ColumnName="ERM_FINANCIAL_COLUMN_SEQ_ID" />
+                <ScalarProperty Name="ERM_PERIOD_ID" ColumnName="ERM_PERIOD_ID" />
+                <ScalarProperty Name="ERM_PERIOD_TYPE_SEQ_ID" ColumnName="ERM_PERIOD_TYPE_SEQ_ID" />
+                <ScalarProperty Name="ERM_SHOCK_GROUP_SEQ_ID" ColumnName="ERM_SHOCK_GROUP_SEQ_ID" />
+                <ScalarProperty Name="ERM_RUN_VERSION_ID" ColumnName="ERM_RUN_VERSION_ID" />
+                <ScalarProperty Name="ERM_RUN_ID" ColumnName="ERM_RUN_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer>
+    <edmx:Connection>
+      <edmx:DesignerInfoPropertySet>
+        <edmx:DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </edmx:DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <edmx:DesignerInfoPropertySet>
+        <edmx:DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <edmx:DesignerProperty Name="EnablePluralization" Value="true" />
+        <edmx:DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <edmx:DesignerProperty Name="UseLegacyProvider" Value="True" />
+        <edmx:DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </edmx:DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams />
+  </edmx:Designer>
+</edmx:Edmx>

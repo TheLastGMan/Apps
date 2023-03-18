@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SSheet_Data" targetNamespace="http://tempuri.org/SSheet_Data.xsd" xmlns:mstns="http://tempuri.org/SSheet_Data.xsd" xmlns="http://tempuri.org/SSheet_Data.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SSheet_Data" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="SSheet_Data" msprop:Generator_UserDSName="SSheet_Data">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SScores" msprop:Generator_TableClassName="SScoresDataTable" msprop:Generator_TableVarName="tableSScores" msprop:Generator_TablePropName="SScores" msprop:Generator_RowDeletingName="SScoresRowDeleting" msprop:Generator_UserTableName="SScores" msprop:Generator_RowChangingName="SScoresRowChanging" msprop:Generator_RowEvHandlerName="SScoresRowChangeEventHandler" msprop:Generator_RowDeletedName="SScoresRowDeleted" msprop:Generator_RowEvArgName="SScoresRowChangeEvent" msprop:Generator_RowChangedName="SScoresRowChanged" msprop:Generator_RowClassName="SScoresRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" minOccurs="0" />
+              <xs:element name="BowlerName" msprop:Generator_ColumnVarNameInTable="columnBowlerName" msprop:Generator_ColumnPropNameInRow="BowlerName" msprop:Generator_ColumnPropNameInTable="BowlerNameColumn" msprop:Generator_UserColumnName="BowlerName" type="xs:string" minOccurs="0" />
+              <xs:element name="Scores" msprop:Generator_ColumnVarNameInTable="columnScores" msprop:Generator_ColumnPropNameInRow="Scores" msprop:Generator_ColumnPropNameInTable="ScoresColumn" msprop:Generator_UserColumnName="Scores" type="xs:string" minOccurs="0" />
+              <xs:element name="SUM_Max" msprop:Generator_ColumnVarNameInTable="columnSUM_Max" msprop:Generator_ColumnPropNameInRow="SUM_Max" msprop:Generator_ColumnPropNameInTable="SUM_MaxColumn" msprop:Generator_UserColumnName="SUM_Max" type="xs:int" minOccurs="0" />
+              <xs:element name="AVE" msprop:Generator_ColumnVarNameInTable="columnAVE" msprop:Generator_ColumnPropNameInRow="AVE" msprop:Generator_ColumnPropNameInTable="AVEColumn" msprop:Generator_UserColumnName="AVE" type="xs:string" minOccurs="0" />
+              <xs:element name="PM" msprop:Generator_ColumnVarNameInTable="columnPM" msprop:Generator_ColumnPropNameInRow="PM" msprop:Generator_ColumnPropNameInTable="PMColumn" msprop:Generator_UserColumnName="PM" type="xs:int" minOccurs="0" />
+              <xs:element name="Sex" msprop:Generator_ColumnVarNameInTable="columnSex" msprop:Generator_ColumnPropNameInRow="Sex" msprop:Generator_ColumnPropNameInTable="SexColumn" msprop:Generator_UserColumnName="Sex" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

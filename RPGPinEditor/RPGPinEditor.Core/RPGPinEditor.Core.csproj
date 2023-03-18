@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AC92785C-82AC-483A-A3AB-63E73E341605}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RPGPinEditor.Core</RootNamespace>
+    <AssemblyName>RPGPinEditor.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommandCode.cs" />
+    <Compile Include="DebugStatement.cs" />
+    <Compile Include="Expressions\Assignment\AddAssignment.cs" />
+    <Compile Include="Expressions\Assignment\AndAssignment.cs" />
+    <Compile Include="Expressions\Assignment\BaseAssignment.cs" />
+    <Compile Include="Expressions\Assignment\DivAssignment.cs" />
+    <Compile Include="Expressions\Assignment\ModAssignment.cs" />
+    <Compile Include="Expressions\Assignment\MulAssignment.cs" />
+    <Compile Include="Expressions\Assignment\SubAssignment.cs" />
+    <Compile Include="Expressions\Audio\AudioBaseChannel.cs" />
+    <Compile Include="Expressions\Audio\AudioChannelCount.cs" />
+    <Compile Include="Expressions\Audio\AudioPause.cs" />
+    <Compile Include="Expressions\Audio\AudioPauseAll.cs" />
+    <Compile Include="Expressions\Audio\AudioPlay.cs" />
+    <Compile Include="Expressions\Audio\AudioPlayImmediate.cs" />
+    <Compile Include="Expressions\Audio\AudioResume.cs" />
+    <Compile Include="Expressions\Audio\AudioResumeAll.cs" />
+    <Compile Include="Expressions\Audio\AudioSetMute.cs" />
+    <Compile Include="Expressions\Audio\AudioSetMuteAll.cs" />
+    <Compile Include="Expressions\Audio\AudioSetVolume.cs" />
+    <Compile Include="Expressions\Audio\AudioSetVolumeAll.cs" />
+    <Compile Include="Expressions\Audio\AudioStop.cs" />
+    <Compile Include="Expressions\Audio\AudioStopAll.cs" />
+    <Compile Include="Expressions\BaseKeywordExpression.cs" />
+    <Compile Include="Expressions\Call.cs" />
+    <Compile Include="Expressions\GameAdmin\Audit\GameAuditAdd.cs" />
+    <Compile Include="Expressions\GameAdmin\Audit\GameAuditCount.cs" />
+    <Compile Include="Expressions\GameAdmin\Audit\GameAuditGet.cs" />
+    <Compile Include="Expressions\GameAdmin\Audit\GameAuditSet.cs" />
+    <Compile Include="Expressions\GameAdmin\Setting\GameSettingAdd.cs" />
+    <Compile Include="Expressions\GameAdmin\Setting\GameSettingCount.cs" />
+    <Compile Include="Expressions\GameAdmin\Setting\GameSettingGet.cs" />
+    <Compile Include="Expressions\GameAdmin\Setting\GameSettingSet.cs" />
+    <Compile Include="Expressions\GameAdmin\Timestamp\GameTimeAdd.cs" />
+    <Compile Include="Expressions\GameAdmin\Timestamp\GameTimeCount.cs" />
+    <Compile Include="Expressions\GameAdmin\Timestamp\GameTimeGet.cs" />
+    <Compile Include="Expressions\GameAdmin\Timestamp\GameTimeSet.cs" />
+    <Compile Include="Expressions\Time\BaseTime.cs" />
+    <Compile Include="Expressions\Time\TimeNowAmPm.cs" />
+    <Compile Include="Expressions\Time\TimeNowDay.cs" />
+    <Compile Include="Expressions\Time\TimeNowDayOfYear.cs" />
+    <Compile Include="Expressions\Time\TimeGetAmPm.cs" />
+    <Compile Include="Expressions\Time\TimeGetDay.cs" />
+    <Compile Include="Expressions\Time\TimeGetDayOfYear.cs" />
+    <Compile Include="Expressions\Time\TimeGetHours.cs" />
+    <Compile Include="Expressions\Time\TimeGetHoursMilitary.cs" />
+    <Compile Include="Expressions\Time\TimeGetIsLeapYear.cs" />
+    <Compile Include="Expressions\Time\TimeGetMinutes.cs" />
+    <Compile Include="Expressions\Time\TimeGetMonth.cs" />
+    <Compile Include="Expressions\Time\TimeGetSeconds.cs" />
+    <Compile Include="Expressions\Time\TimeGetYear.cs" />
+    <Compile Include="Expressions\Time\TimeNowHours.cs" />
+    <Compile Include="Expressions\Time\TimeNowHoursMilitary.cs" />
+    <Compile Include="Expressions\Time\TimeNowIsLeapYear.cs" />
+    <Compile Include="Expressions\Time\TimeNow.cs" />
+    <Compile Include="Expressions\Time\TimeNowMinutes.cs" />
+    <Compile Include="Expressions\Time\TimeNowMonth.cs" />
+    <Compile Include="Expressions\Time\TimeNowSeconds.cs" />
+    <Compile Include="Expressions\Time\TimeNowSet.cs" />
+    <Compile Include="Expressions\Time\TimeNowSetSpecific.cs" />
+    <Compile Include="Expressions\Grouping.cs" />
+    <Compile Include="Expressions\Time\TimeNowYear.cs" />
+    <Compile Include="Expressions\Variable\ParameterClear.cs" />
+    <Compile Include="Expressions\Variable\ParameterCreate.cs" />
+    <Compile Include="Expressions\Variable\VariableLowerBound.cs" />
+    <Compile Include="Expressions\Variable\VariableSet.cs" />
+    <Compile Include="Expressions\Variable\VariableGet.cs" />
+    <Compile Include="Expressions\Assignment\XorAssignment.cs" />
+    <Compile Include="Expressions\BasicMath\Add.cs" />
+    <Compile Include="Expressions\BasicMath\Div.cs" />
+    <Compile Include="Expressions\BasicMath\Xor.cs" />
+    <Compile Include="Expressions\BasicMath\Mod.cs" />
+    <Compile Include="Expressions\BasicMath\Mul.cs" />
+    <Compile Include="Expressions\BasicMath\Sub.cs" />
+    <Compile Include="Expressions\BasicMath\And.cs" />
+    <Compile Include="Expressions\BasicMath\Or.cs" />
+    <Compile Include="Expressions\Variable\VariableDelete.cs" />
+    <Compile Include="Expressions\Variable\VariableUpperBound.cs" />
+    <Compile Include="Expressions\Variable\VariableCreate.cs" />
+    <Compile Include="Keywords\EndBlock.cs" />
+    <Compile Include="Keywords\GotoCase.cs" />
+    <Compile Include="Keywords\Return.cs" />
+    <Compile Include="PrettyPrint.cs" />
+    <Compile Include="Statements\Helpers\BLOCKSIZE.cs" />
+    <Compile Include="Statements\Helpers\CMD.cs" />
+    <Compile Include="Keywords\ExpressionBlock.cs" />
+    <Compile Include="Keywords\Break.cs" />
+    <Compile Include="Keywords\Continue.cs" />
+    <Compile Include="Statements\Case.cs" />
+    <Compile Include="Statements\Helpers\COMMENT.cs" />
+    <Compile Include="Statements\Helpers\ICOMMENT.cs" />
+    <Compile Include="Statements\Helpers\JUMPBLOCK.cs" />
+    <Compile Include="Statements\Jump.cs" />
+    <Compile Include="Keywords\Keyword.cs" />
+    <Compile Include="Keywords\StatementBlock.cs" />
+    <Compile Include="Expressions\Constant.cs" />
+    <Compile Include="Expressions\AndAlso.cs" />
+    <Compile Include="Expressions\ComparableKeywordCommand.cs" />
+    <Compile Include="Expressions\Comparator\GreaterThan.cs" />
+    <Compile Include="Expressions\Comparator\GreaterThanOrEqual.cs" />
+    <Compile Include="Expressions\Comparator\LessThan.cs" />
+    <Compile Include="Expressions\ComparableCommand.cs" />
+    <Compile Include="Expressions\Comparator\Equals.cs" />
+    <Compile Include="Expressions\Comparator\LessThanOrEqual.cs" />
+    <Compile Include="Expressions\Not.cs" />
+    <Compile Include="Expressions\Comparator\NotEqual.cs" />
+    <Compile Include="Expressions\OrElse.cs" />
+    <Compile Include="IKeyword.cs" />
+    <Compile Include="IStatement.cs" />
+    <Compile Include="IExpression.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Statements\DoWhile.cs" />
+    <Compile Include="Statements\For.cs" />
+    <Compile Include="Statements\If.cs" />
+    <Compile Include="Statements\IfElse.cs" />
+    <Compile Include="Statements\Nop.cs" />
+    <Compile Include="Statements\Helpers\RAW.cs" />
+    <Compile Include="Statements\Switch.cs" />
+    <Compile Include="Statements\While.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

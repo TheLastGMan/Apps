@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadingLoader", "ReadingLoader\ReadingLoader.csproj", "{8E55DA50-4B4A-40AA-BBE6-7163FD9875D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadingLoader.Test", "ReadingLoader.Test\ReadingLoader.Test.csproj", "{251C0405-4F49-47CD-B14D-F1582DDEFBFC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8E55DA50-4B4A-40AA-BBE6-7163FD9875D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E55DA50-4B4A-40AA-BBE6-7163FD9875D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E55DA50-4B4A-40AA-BBE6-7163FD9875D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E55DA50-4B4A-40AA-BBE6-7163FD9875D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{251C0405-4F49-47CD-B14D-F1582DDEFBFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{251C0405-4F49-47CD-B14D-F1582DDEFBFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{251C0405-4F49-47CD-B14D-F1582DDEFBFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{251C0405-4F49-47CD-B14D-F1582DDEFBFC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C4178330-0DAA-4514-A39F-629CC4666FD1}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://rpgcor.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ReadingLoader\\ReadingLoader.csproj
+		SccProjectName1 = ReadingLoader
+		SccLocalPath1 = ReadingLoader
+		SccProjectUniqueName2 = ReadingLoader.Test\\ReadingLoader.Test.csproj
+		SccProjectName2 = ReadingLoader.Test
+		SccLocalPath2 = ReadingLoader.Test
+	EndGlobalSection
+EndGlobal

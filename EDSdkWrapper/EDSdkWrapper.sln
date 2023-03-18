@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EDSdkWrapper", "EDSdkWrapper.csproj", "{6480D27B-8D88-45A7-BBF7-0039FFF1887B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTest", "UnitTest", "{883078BB-E036-4042-88AB-838F98B2D23E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CanonSDK", "CanonSDK", "{D747CEAB-3789-4147-B7F4-66DE46C2A223}"
+	ProjectSection(SolutionItems) = preProject
+		CanonSDK\EDSDK.dll = CanonSDK\EDSDK.dll
+		CanonSDK\EdsImage.dll = CanonSDK\EdsImage.dll
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EDSdkWrapper.Test", "EDSdkWrapper.Test\EDSdkWrapper.Test.csproj", "{E38C1430-176D-4E11-8593-6F7A74195AF2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{4AA8C58C-B87D-4C8D-AE11-156FB61F7AAA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{A9BBB371-6DE3-499C-AA69-57FC13C626CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EosViewer", "..\EosViewer\EosViewer.csproj", "{E69FDC3D-517F-449F-9B94-FF2F70489A1E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6480D27B-8D88-45A7-BBF7-0039FFF1887B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6480D27B-8D88-45A7-BBF7-0039FFF1887B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6480D27B-8D88-45A7-BBF7-0039FFF1887B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6480D27B-8D88-45A7-BBF7-0039FFF1887B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E38C1430-176D-4E11-8593-6F7A74195AF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E38C1430-176D-4E11-8593-6F7A74195AF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E38C1430-176D-4E11-8593-6F7A74195AF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E38C1430-176D-4E11-8593-6F7A74195AF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E69FDC3D-517F-449F-9B94-FF2F70489A1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E69FDC3D-517F-449F-9B94-FF2F70489A1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E69FDC3D-517F-449F-9B94-FF2F70489A1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E69FDC3D-517F-449F-9B94-FF2F70489A1E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6480D27B-8D88-45A7-BBF7-0039FFF1887B} = {A9BBB371-6DE3-499C-AA69-57FC13C626CE}
+		{D747CEAB-3789-4147-B7F4-66DE46C2A223} = {A9BBB371-6DE3-499C-AA69-57FC13C626CE}
+		{E38C1430-176D-4E11-8593-6F7A74195AF2} = {883078BB-E036-4042-88AB-838F98B2D23E}
+		{E69FDC3D-517F-449F-9B94-FF2F70489A1E} = {4AA8C58C-B87D-4C8D-AE11-156FB61F7AAA}
+	EndGlobalSection
+EndGlobal

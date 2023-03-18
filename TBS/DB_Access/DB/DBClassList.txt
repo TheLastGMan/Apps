@@ -1,0 +1,10 @@
+﻿//D - DataBase, U - UserControl, T - Tournament, R - Report
+//Type [D,U,T] | Description | assembly file, root namespace
+D|Microsoft Access|TBDB.MS_Access, TBDB
+D|Lite DB|TBDB.LiteDB, TBDB
+T|8 Person Single Elimination|Tournaments.Eight_PPL.TSetup, Tournaments.Eight_PPL
+//T|12 Person Tiered|Tournaments.Twelve_PPL.TSetup, Tournaments.Twelve_PPL
+R|Weekly Scoresheet|Tourney_Builder.SSheet, Tourney_Builder
+R|3 Game Scoresheet|Reports.ScoreSheet_3G.SSheet, Reports.ScoreSheet_3G
+R|Final Averages|Reports.Final_Averages.FAverages, Reports.Final_Averages
+R|Bowler History|Reports.Bowler_History.BHistory, Reports.Bowler_History

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <configSections>
+    <section name="dataConfiguration" type="Microsoft.Practices.EnterpriseLibrary.Data.Configuration.DatabaseSettings, Microsoft.Practices.EnterpriseLibrary.Data"/>
+  </configSections>
+  <appSettings>
+    <add key="DataFilesDirectory" value=""/>
+    <add key="DataAccessType" value=""/>
+  </appSettings>
+  <connectionStrings>
+    <add name="MARKET" providerName="System.Data.SqlClient" connectionString=""/>
+  </connectionStrings>
+  <dataConfiguration defaultDatabase="MARKET"/>
+</configuration>

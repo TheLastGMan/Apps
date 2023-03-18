@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="PixelMapper.exe" version="1.0.0.0" publicKeyToken="287a65d66dd67829" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="Pixel_Icon.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="PixelMapper" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="PixelMapper.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet class="System.Security.PermissionSet" version="1" ID="Custom" SameSite="site" Unrestricted="true" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!-- UAC Manifest Options
+            If you want to change the Windows User Account Control level replace the 
+            requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+            Specifying requestedExecutionLevel node will disable file and registry virtualization.
+            If you want to utilize File and Registry Virtualization for backward 
+            compatibility then delete the requestedExecutionLevel node.
+        -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Finder.dll" size="9216">
+      <assemblyIdentity name="Finder" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>l/vCXnRmeBvY9vuier46y39FuP8=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PixelMapper.exe" size="2472312">
+      <assemblyIdentity name="PixelMapper" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>4tgnAlLbQPWRbfux/2vkfm2jLbw=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PixelMapper.Core.dll" size="16384">
+      <assemblyIdentity name="PixelMapper.Core" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>FuKyQyyylNVzvkUxfZqh75u+NyY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PixelMapper.Profile.RpgDmd.dll" size="27648">
+      <assemblyIdentity name="PixelMapper.Profile.RpgDmd" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>M+3Dj9TbSIVK2EtDeQWAyMQYJ1k=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="Pixel_Icon.ico" size="370070">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>bMhDdhL0ZTw2lb1D/1yAParg9z0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="PixelMapper.exe.config" size="956">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>zhfc34aG++ZTRa7MHyQlGs1dbVU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="publish\images\BrightnessContrast.jpg" size="9348">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>lnKrMTkALIvP4nO6ERO2KdDrAn8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="publish\images\DMDClassic.jpg" size="40661">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>fQ6QBo80bU2yujR8syNA3CTvXhc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="publish\images\MainScreen.jpg" size="124844">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>yFp5gcNHb+KQ4VJVjPsUW2JU9L0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="publish\Index.html" size="3233">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>FWFGw172/vrcLLxnSCGxGcEfhls=</dsig:DigestValue>
+    </hash>
+  </file>
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- A list of all Windows versions that this application is designed to work with. 
+      Windows will automatically select the most compatible environment.-->
+      <!-- If your application is designed to work with Windows Vista, uncomment the following supportedOS node-->
+      <!--<supportedOS Id="{e2011457-1546-43c5-a5fe-008deee3d3f0}"></supportedOS>-->
+      <!-- If your application is designed to work with Windows 7, uncomment the following supportedOS node-->
+      <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}"/>-->
+      <!-- If your application is designed to work with Windows 8, uncomment the following supportedOS node-->
+      <!--<supportedOS Id="{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}"></supportedOS>-->
+      <!-- If your application is designed to work with Windows 8.1, uncomment the following supportedOS node-->
+      <!--<supportedOS Id="{1f676c76-80e1-4239-95bb-83d0f6d0da78}"/>-->
+    </application>
+  </compatibility>
+<publisherIdentity name="CN=AFII\rgau1" issuerKeyHash="3a03cab3806bc98dd706f20b7c4a6c8464c94ca8" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>w4Jre0QUewiF+xp5VW0n7cggjzM=</DigestValue></Reference></SignedInfo><SignatureValue>zfxrE6SXRwKlf5k8y0KABCjMqjkcJHyV1GIqoXZymVMK0FU37wd3toeEMnrDkfKwd9NIu0+zEnuVzQWizp8SiYTzuXUmjuf4Uiy8eGntwmxG85TDX5mOTmPEAtaUOUtb4kD2xxIEAmUQ5eQkaHfIr00JZqpuMuw5Ckmn1lnDlV8=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>8DwidjYNDsvJzVIWH0NXAV696hzxjqXFIjnXV6za83BikYVXJtMRulN/M16OAD1P1df1HJsmb8ZYDBZDIH5N/cr5OmoGIAWCiKpu58rpbnblxeXweZGuymbwfwnO9yMj4LXot6Dpe/S9ox9kNWR9DAgzVQwC3cjGzrV/CAOskwU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="338f20c8ed276d55791afb85087b14447b6b82c3" Description="" Url=""><as:assemblyIdentity name="PixelMapper.exe" version="1.0.0.0" publicKeyToken="287a65d66dd67829" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=AFII\rgau1</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>5yNXiHvWwwOl+BpEcsFz/SdvFu4=</DigestValue></Reference></SignedInfo><SignatureValue>dsYsEkSnLmeIY4OC2x+txOBvrrlS3my1n3J7aw82QKKykwHrxXK6bukRYZDrG+zFMWkdADz1NsFT1GS0f51Sr8qglWbaoGb9euKZ2U95uVBBys74DEocGK53b/OKyxKSYZFDbUnvVmCBPJFO9uZv12hAafSU20rHZFQHNxniWAI=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>8DwidjYNDsvJzVIWH0NXAV696hzxjqXFIjnXV6za83BikYVXJtMRulN/M16OAD1P1df1HJsmb8ZYDBZDIH5N/cr5OmoGIAWCiKpu58rpbnblxeXweZGuymbwfwnO9yMj4LXot6Dpe/S9ox9kNWR9DAgzVQwC3cjGzrV/CAOskwU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIBwTCCASqgAwIBAgIQaj6AXT/s/LRFmBez2sFJDjANBgkqhkiG9w0BAQUFADAfMR0wGwYDVQQDHhQAQQBGAEkASQBcAHIAZwBhAHUAMTAeFw0xNTA2MDkwMjM0MDZaFw0xNjA2MDgwODM0MDZaMB8xHTAbBgNVBAMeFABBAEYASQBJAFwAcgBnAGEAdQAxMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDwPCJ2Ng0Oy8nNUhYfQ1cBXr3qHPGOpcUiOddXrNrzcGKRhVcm0xG6U38zXo4APU/V1/UcmyZvxlgMFkMgfk39yvk6agYgBYKIqm7nyuluduXF5fB5ka7KZvB/Cc73IyPgtei3oOl79L2jH2Q1ZH0MCDNVDALdyMbOtX8IA6yTBQIDAQABMA0GCSqGSIb3DQEBBQUAA4GBAKoLI/7U+nmt6ELqGgEcozEQ9/oZVbbGEzPeom9F1gG7GcYWeVgvtf9Me+g9iJS2Ktvr8cfzEaHJvNzLwN3It2vrKyh2nq3O1DNmHFECHvhRietomgCCQNCuKmY9Msi1xZsrIF2WnA7UKR8Dq2pNMPQIT+3R0hTsntMx0h8nckVF</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

@@ -1,0 +1,4 @@
+﻿port
+server
+email
+password

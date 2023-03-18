@@ -1,0 +1,8 @@
+﻿{TAB 6}
+{ENTER}
+{X\SLP 1000}
+%FE
+{X\SLP 2000}
+{TAB 2}
+{ENTER}
+{X\SLP 5000}

@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArenaChessGameAnalyzer.CLI", "ArenaChessGameAnalyzer.CLI\ArenaChessGameAnalyzer.CLI.csproj", "{1CFEF64C-CE6E-441A-A1FA-92D43D10A458}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArenaChessGameAnalyzer.Core", "ArenaChessGameAnalyzer.Core\ArenaChessGameAnalyzer.Core.csproj", "{8CB988EF-6DC2-4416-904A-48D886A64AA9}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ArenaChessGameAnalyzer.Logic", "ArenaChessGameAnalyzer.Logic\ArenaChessGameAnalyzer.Logic.fsproj", "{A7EAEB0F-DC3D-42C6-91A1-5764B0CA0A88}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ArenaChessGameAnalyzer.LogicData", "ArenaChessGameAnalyzer.LogicData\ArenaChessGameAnalyzer.LogicData.fsproj", "{0CA78878-8DB0-43D0-8411-BD30081B7087}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArenaChessGameAnalyzer.Data", "ArenaChessGameAnalyzer.Data\ArenaChessGameAnalyzer.Data.csproj", "{DCFB978D-9F79-4277-9F4F-BD85FC466AF2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1CFEF64C-CE6E-441A-A1FA-92D43D10A458}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CFEF64C-CE6E-441A-A1FA-92D43D10A458}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CFEF64C-CE6E-441A-A1FA-92D43D10A458}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CFEF64C-CE6E-441A-A1FA-92D43D10A458}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CB988EF-6DC2-4416-904A-48D886A64AA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CB988EF-6DC2-4416-904A-48D886A64AA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CB988EF-6DC2-4416-904A-48D886A64AA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CB988EF-6DC2-4416-904A-48D886A64AA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7EAEB0F-DC3D-42C6-91A1-5764B0CA0A88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7EAEB0F-DC3D-42C6-91A1-5764B0CA0A88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7EAEB0F-DC3D-42C6-91A1-5764B0CA0A88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7EAEB0F-DC3D-42C6-91A1-5764B0CA0A88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CA78878-8DB0-43D0-8411-BD30081B7087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CA78878-8DB0-43D0-8411-BD30081B7087}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CA78878-8DB0-43D0-8411-BD30081B7087}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CA78878-8DB0-43D0-8411-BD30081B7087}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCFB978D-9F79-4277-9F4F-BD85FC466AF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCFB978D-9F79-4277-9F4F-BD85FC466AF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCFB978D-9F79-4277-9F4F-BD85FC466AF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCFB978D-9F79-4277-9F4F-BD85FC466AF2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Scripting">
+      <UniqueIdentifier>{fd71cc13-18ed-4b03-b5e5-d86c1d5bc26f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Scripting">
+      <UniqueIdentifier>{e938d5a5-4529-4ea7-b25f-9d1b3201b03b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Scripting\Processor">
+      <UniqueIdentifier>{46156d49-a337-4295-a050-2604b2d87c7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Scripting\Processor">
+      <UniqueIdentifier>{15d1c836-b0e2-4cdd-aa86-018ff93138c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DataType">
+      <UniqueIdentifier>{6872b31a-429a-4ce3-9082-31e868f0ed89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DataType">
+      <UniqueIdentifier>{c3c37bf0-42ce-4e9a-a533-2ef479328a76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Logging">
+      <UniqueIdentifier>{a44b07ff-f028-4912-b2ab-30f00d350b30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Logging">
+      <UniqueIdentifier>{7216656d-0871-4397-bd9a-c33e719cf368}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Audio">
+      <UniqueIdentifier>{b0352632-41b0-4510-8193-ba4dc3d99ba8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Audio">
+      <UniqueIdentifier>{ebd63ba3-7ea5-4cf2-99cd-221f5e7ee288}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameAdmin">
+      <UniqueIdentifier>{716fa5e0-2435-4fe8-835e-fcf62a04f6aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameAdmin">
+      <UniqueIdentifier>{30367b6f-66eb-4c39-af87-2489fa92f02d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Resource">
+      <UniqueIdentifier>{43321f0f-ac2d-4530-bbe5-f376fdde3fb4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Resource">
+      <UniqueIdentifier>{b4714a66-cf33-4763-8243-5d7d60f5c777}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\HAL">
+      <UniqueIdentifier>{3b3eb0c4-45ad-4824-86f7-1e6c3e3f9b9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\HAL">
+      <UniqueIdentifier>{d18f29f4-0bb3-44f5-8eb7-d06b8dea0b04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\HAL\Time">
+      <UniqueIdentifier>{7efced5d-f42f-4373-a1af-c952579b9b3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\HAL\Time">
+      <UniqueIdentifier>{4a72ac83-7b5d-4177-a8b8-067e1b64e094}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\HAL\RNG">
+      <UniqueIdentifier>{edfad97c-9999-4275-8e8d-ed2617f84165}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\HAL\RNG">
+      <UniqueIdentifier>{9cd0a529-29fd-47d2-bc1e-cc258c6e3e59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameService">
+      <UniqueIdentifier>{7cdb7d02-aece-4d04-b6be-730e8ff2f392}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameService">
+      <UniqueIdentifier>{6b4ae8ab-eaa5-492b-bce3-d070625098a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\HAL\IO">
+      <UniqueIdentifier>{4a267db9-76af-47fd-81a4-0a111989c23e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\HAL\IO">
+      <UniqueIdentifier>{c140eb86-9857-40c1-8f11-38b9bb9dee21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PlayfieldService">
+      <UniqueIdentifier>{dd09c488-1aa6-49cd-b4af-30eb060e8f55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\PlayfieldService">
+      <UniqueIdentifier>{a18e0e9e-f0c8-42e8-9a5c-84bbbbe16e80}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Program.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptService.cpp">
+      <Filter>Source Files\Scripting</Filter>
+    </ClCompile>
+    <ClCompile Include="SystemScriptProcessor.cpp">
+      <Filter>Source Files\Scripting\Processor</Filter>
+    </ClCompile>
+    <ClCompile Include="VariableScriptProcessor.cpp">
+      <Filter>Source Files\Scripting\Processor</Filter>
+    </ClCompile>
+    <ClCompile Include="EqualityScriptProcessor.cpp">
+      <Filter>Source Files\Scripting\Processor</Filter>
+    </ClCompile>
+    <ClCompile Include="BasicMathScriptProcessor.cpp">
+      <Filter>Source Files\Scripting\Processor</Filter>
+    </ClCompile>
+    <ClCompile Include="SwitchScriptProcessor.cpp">
+      <Filter>Source Files\Scripting\Processor</Filter>
+    </ClCompile>
+    <ClCompile Include="LoopScriptProcessor.cpp">
+      <Filter>Source Files\Scripting\Processor</Filter>
+    </ClCompile>
+    <ClCompile Include="Logger.cpp">
+      <Filter>Source Files\Logging</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioService.cpp">
+      <Filter>Source Files\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioStream.cpp">
+      <Filter>Source Files\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioScriptProcessor.cpp">
+      <Filter>Source Files\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="AuditService.cpp">
+      <Filter>Source Files\GameAdmin</Filter>
+    </ClCompile>
+    <ClCompile Include="SettingService.cpp">
+      <Filter>Source Files\GameAdmin</Filter>
+    </ClCompile>
+    <ClCompile Include="SettingScriptProcessor.cpp">
+      <Filter>Source Files\GameAdmin</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceService.cpp">
+      <Filter>Source Files\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeService.cpp">
+      <Filter>Source Files\HAL\Time</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeScriptProcessor.cpp">
+      <Filter>Source Files\HAL\Time</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeStampService.cpp">
+      <Filter>Source Files\GameAdmin</Filter>
+    </ClCompile>
+    <ClCompile Include="GameCacheableSettings.cpp">
+      <Filter>Source Files\GameAdmin</Filter>
+    </ClCompile>
+    <ClCompile Include="Random.cpp">
+      <Filter>Source Files\HAL\RNG</Filter>
+    </ClCompile>
+    <ClCompile Include="RandomService.cpp">
+      <Filter>Source Files\HAL\RNG</Filter>
+    </ClCompile>
+    <ClCompile Include="MathScriptProcessor.cpp">
+      <Filter>Source Files\HAL\RNG</Filter>
+    </ClCompile>
+    <ClCompile Include="GlobalSettingService.cpp">
+      <Filter>Source Files\GameAdmin</Filter>
+    </ClCompile>
+    <ClCompile Include="CountsService.cpp">
+      <Filter>Source Files\GameAdmin</Filter>
+    </ClCompile>
+    <ClCompile Include="GameSetting.cpp">
+      <Filter>Source Files\GameAdmin</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerService.cpp">
+      <Filter>Source Files\GameService</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerSetting.cpp">
+      <Filter>Source Files\GameService</Filter>
+    </ClCompile>
+    <ClCompile Include="GameServiceScriptProcessor.cpp">
+      <Filter>Source Files\GameService</Filter>
+    </ClCompile>
+    <ClCompile Include="KeyBoard.cpp">
+      <Filter>Source Files\HAL\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="Mouse.cpp">
+      <Filter>Source Files\HAL\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="ModeService.cpp">
+      <Filter>Source Files\GameService</Filter>
+    </ClCompile>
+    <ClCompile Include="Mode.cpp">
+      <Filter>Source Files\GameService</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SystemScriptProcessor.h">
+      <Filter>Header Files\Scripting\Processor</Filter>
+    </ClInclude>
+    <ClInclude Include="VariableScriptProcessor.h">
+      <Filter>Header Files\Scripting\Processor</Filter>
+    </ClInclude>
+    <ClInclude Include="EqualityScriptProcessor.h">
+      <Filter>Header Files\Scripting\Processor</Filter>
+    </ClInclude>
+    <ClInclude Include="BasicMathScriptProcessor.h">
+      <Filter>Header Files\Scripting\Processor</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptService.h">
+      <Filter>Header Files\Scripting</Filter>
+    </ClInclude>
+    <ClInclude Include="BasicCollection.h">
+      <Filter>Header Files\DataType</Filter>
+    </ClInclude>
+    <ClInclude Include="UniqueCollection.h">
+      <Filter>Header Files\DataType</Filter>
+    </ClInclude>
+    <ClInclude Include="ParameterBlock.h">
+      <Filter>Header Files\Scripting</Filter>
+    </ClInclude>
+    <ClInclude Include="SwitchScriptProcessor.h">
+      <Filter>Header Files\Scripting\Processor</Filter>
+    </ClInclude>
+    <ClInclude Include="LoopScriptProcessor.h">
+      <Filter>Header Files\Scripting\Processor</Filter>
+    </ClInclude>
+    <ClInclude Include="BlockCommandCode.h">
+      <Filter>Header Files\Scripting\Processor</Filter>
+    </ClInclude>
+    <ClInclude Include="LoggingLevel.h">
+      <Filter>Header Files\Logging</Filter>
+    </ClInclude>
+    <ClInclude Include="Logger.h">
+      <Filter>Header Files\Logging</Filter>
+    </ClInclude>
+    <ClInclude Include="ILogger.h">
+      <Filter>Header Files\Logging</Filter>
+    </ClInclude>
+    <ClInclude Include="UnknownCommandException.h">
+      <Filter>Header Files\Scripting</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioService.h">
+      <Filter>Header Files\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="IAudioChannel.h">
+      <Filter>Header Files\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioStream.h">
+      <Filter>Header Files\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioScriptProcessor.h">
+      <Filter>Header Files\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="AuditService.h">
+      <Filter>Header Files\GameAdmin</Filter>
+    </ClInclude>
+    <ClInclude Include="ISettingProvider.h">
+      <Filter>Header Files\GameAdmin</Filter>
+    </ClInclude>
+    <ClInclude Include="SettingService.h">
+      <Filter>Header Files\GameAdmin</Filter>
+    </ClInclude>
+    <ClInclude Include="SettingScriptProcessor.h">
+      <Filter>Header Files\GameAdmin</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceService.h">
+      <Filter>Header Files\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceType.h">
+      <Filter>Header Files\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="IResourceLocator.h">
+      <Filter>Header Files\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceNotFoundException.h">
+      <Filter>Header Files\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeService.h">
+      <Filter>Header Files\HAL\Time</Filter>
+    </ClInclude>
+    <ClInclude Include="ITimeProvider.h">
+      <Filter>Header Files\HAL\Time</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeScriptProcessor.h">
+      <Filter>Header Files\HAL\Time</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptProcessor.h">
+      <Filter>Header Files\DataType</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeStampService.h">
+      <Filter>Header Files\GameAdmin</Filter>
+    </ClInclude>
+    <ClInclude Include="GameCacheAbleSetting.h">
+      <Filter>Header Files\GameAdmin</Filter>
+    </ClInclude>
+    <ClInclude Include="RandomService.h">
+      <Filter>Header Files\HAL\RNG</Filter>
+    </ClInclude>
+    <ClInclude Include="Random.h">
+      <Filter>Header Files\HAL\RNG</Filter>
+    </ClInclude>
+    <ClInclude Include="MathScriptProcessor.h">
+      <Filter>Header Files\HAL\RNG</Filter>
+    </ClInclude>
+    <ClInclude Include="GlobalSettingService.h">
+      <Filter>Header Files\GameAdmin</Filter>
+    </ClInclude>
+    <ClInclude Include="AdminResource.h">
+      <Filter>Header Files\GameAdmin</Filter>
+    </ClInclude>
+    <ClInclude Include="CountsService.h">
+      <Filter>Header Files\GameAdmin</Filter>
+    </ClInclude>
+    <ClInclude Include="GameSetting.h">
+      <Filter>Header Files\GameAdmin</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerService.h">
+      <Filter>Header Files\GameService</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerSetting.h">
+      <Filter>Header Files\GameService</Filter>
+    </ClInclude>
+    <ClInclude Include="GameServiceScriptProcessor.h">
+      <Filter>Header Files\GameService</Filter>
+    </ClInclude>
+    <ClInclude Include="Mouse.h">
+      <Filter>Header Files\HAL\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyData.h">
+      <Filter>Header Files\HAL\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyAction.h">
+      <Filter>Header Files\HAL\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyBoard.h">
+      <Filter>Header Files\HAL\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="IKeyBoardListener.h">
+      <Filter>Header Files\HAL\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="IMouseListener.h">
+      <Filter>Header Files\HAL\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="MouseData.h">
+      <Filter>Header Files\HAL\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="MouseAction.h">
+      <Filter>Header Files\HAL\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="ModeService.h">
+      <Filter>Header Files\GameService</Filter>
+    </ClInclude>
+    <ClInclude Include="ComNetwork.h">
+      <Filter>Header Files\HAL\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="Mode.h">
+      <Filter>Header Files\GameService</Filter>
+    </ClInclude>
+    <ClInclude Include="ModeKeyMap.h">
+      <Filter>Header Files\GameService</Filter>
+    </ClInclude>
+    <ClInclude Include="SolenoidService.h">
+      <Filter>Header Files\PlayfieldService</Filter>
+    </ClInclude>
+    <ClInclude Include="LightService.h">
+      <Filter>Header Files\PlayfieldService</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

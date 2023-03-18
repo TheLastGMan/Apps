@@ -1,0 +1,286 @@
+﻿@font-face {
+    font-family: "Desigers";
+    src:url(fonts/Desigers.ttf) format('truetype'),
+        url(fonts/Desigers.eot) format('eot');
+}
+
+@font-face {
+    font-family: "Trade Gothic";
+    src:url(fonts/TradeGothicStd.ttf) format('truetype'),
+        url(fonts/TradeGothicStd.eot) format('eot');
+}
+
+@font-face {
+    font-family: "XMas";
+    src:url(fonts/xmaslght.ttf) format('truetype');
+}
+
+h1 {
+    font-family: Desigers, Georgia;
+    font-size: 2.0em;
+    text-align: center;
+}
+
+hr {
+    border:1px solid #C9262C;
+}
+
+ul {
+    margin-bottom:10px;
+}
+
+ul li {
+    margin: 3px 0;
+}
+
+a, input[type=submit] {
+    transition:color ease 500ms;
+    -webkit-transition:color ease 500ms;
+    -moz-transition:color ease 500ms;
+    -o-transition:color ease 500ms;
+}
+
+html {
+    min-height:100%;
+    background: #361100;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzk5MzMwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzNjExMDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top, #993300 0%, #361100 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#993300), color-stop(100%,#361100));
+    background: -webkit-linear-gradient(top, #993300 0%,#361100 100%);
+    background: -o-linear-gradient(top, #993300 0%,#361100 100%);
+    background: -ms-linear-gradient(top, #993300 0%,#361100 100%);
+    background: linear-gradient(to bottom, #993300 0%,#361100 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#993300', endColorstr='#361100',GradientType=0 );
+}
+
+body {
+    font-size:12px;
+    font-family:Cambria, 'Times New Roman';
+    font-weight:bold;
+    text-align:center;
+}
+
+#main_container {
+    background-color:#FFF;
+    min-width:320px;
+    max-width:1000px;
+    margin:5px auto;
+    padding:2px;
+    border:2px solid #000;
+    border-radius:15px;
+}
+
+#main_content {
+    min-height:250px;
+    border-top:2px solid #C9262C;
+    border-bottom:2px solid #C9262C;
+    width:100%;
+}
+
+#header {
+    width:100%;
+    font-family:XMas, Desigers, Georgia;
+    font-size:6.0em;
+    padding:5px 0;
+    border-radius:15px 15px 0 0;
+}
+
+#footer {
+    width:100%;
+    font-size:0.8em;
+    padding:5px 0;
+    border-radius:0 0 15px 15px;
+}
+
+#login_init {
+    text-align: center;
+    font-size:1.2em;
+    padding:5px 0;
+    border-top:2px solid #C9262C;
+}
+
+/* Wishlist Table */
+#wishlistgrid{
+    width:75%;
+    max-width:500px;
+    margin:5px auto;
+    border:1px solid #000;
+    text-align:center;
+    vertical-align:middle;
+    border-spacing:0px;
+}
+
+#wishlistgrid input {
+    width:90%;
+    padding:3px;
+    border-radius:10px;
+    max-width:300px;
+}
+
+#wishlistgrid input[type=submit] {
+    font-weight:bold;
+    height:25px;
+    border:1px solid #000;
+    line-height:20px;
+    border-radius:10px;
+    background-color:#36E4FC;
+    transition:background-color linear 500ms;
+}
+
+#wishlistgrid input[type=submit]:hover{
+    background-color:#2DC3CA;
+}
+
+ #wishlistgrid thead {
+    font-family: Desigers, Georgia;
+    border-bottom:1px solid black;
+    background-color:#5B9EFC;
+    font-size:1.5em;
+}
+
+#wishlistgrid td {
+    border-bottom:1px dashed #000;
+    font-size:1.1em;
+    height:30px;
+    background-color:#B8EB1E;
+    vertical-align:middle;
+}
+
+#wishlistgrid tfoot tr td {
+    background-color:#5B9EFC;
+    border-bottom:none;
+}
+
+/* User Table */
+#ss_users {
+    width: 75%;
+    margin:5px auto;
+    border:1px solid black;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#ss_users tbody td {
+    border-bottom:1px dashed black;
+    font-size:1.2em;
+    height:25px;
+    background-color:#B8EB1E;
+}
+
+#ss_users thead {
+    font-family: Desigers, Georgia;
+    padding: 5px 0;
+    border-bottom:1px solid black;
+    background-color:#5B9EFC;
+    font-size:1.5em;
+}
+
+/* Buttons */
+.button
+{
+    width: 230px;
+    height: 80px;
+    font-size:1.75em;
+    text-align:center;
+    border:2px solid black;
+    font-family:Desigers, Georgia;
+    padding:0 5px;
+    margin:10px 0;
+    background-color:#B8EB1E;
+
+    border-radius: 15px;
+
+    box-shadow:5px 5px 10px 1px #000;
+    -moz-box-shadow:5px 5px 10px 1px #000;
+    -webkit-box-shadow:5px 5px 10px 1px #000;
+    -o-box-shadow:5px 5px 10px 1px #000;
+
+    transition:background-color 0.5s ease;
+    -moz-transition:background-color 0.5s ease;
+    -webkit-transition:background-color 0.5s ease;
+    -o-transition:background-color 0.5s ease;
+}
+
+.button:hover
+{
+    background-color: #82A616;
+}
+
+.fb_button {
+    background-color:#3B5998;
+    color:#000;
+    width:300px;
+    height:30px;
+    font-size:1.2em;
+    font-weight:bold;
+    text-decoration:underline;
+    margin:5px 0;
+    border:1px solid #000;
+    border-radius:15px;
+}
+
+.fb_button:hover{
+    color:#eee;
+}
+
+/* Home Page Selections */
+.SecretSanta, .ChooseSecretSanta, .SecretSantaWait, .ShowRegistration, .MissedEntry, .Invalid_WorkLocation, .NotLoggedIn
+{
+    font-family:Cambria, 'Times New Roman';
+    font-weight:bold;
+    font-size: 2.0em;
+}
+
+.Invalid_WorkLocation, .NotLoggedIn {
+    color: red;
+}
+
+.fb_profile_image {
+    width: 45px;
+    border:1px solid black;
+}
+
+.links {
+    font-size: 2.0em;
+    text-align: center;
+    padding:5px 0;
+}
+
+.links a {
+    color: #000;
+    font-family:Desigers, Georgia;
+    padding:2px 5px;
+
+    transition:color 0.5s ease;
+    -moz-transition:color 0.5s ease;
+    -webkit-transition:color 0.5s ease;
+    -o-transition:color 0.5s ease;
+}
+
+.links a:hover {
+    color: yellow;
+}
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error {
+    color: #ff0000;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid #ff0000;
+    background-color: #ffeeee;
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.validation-summary-valid {
+    display: none;
+}

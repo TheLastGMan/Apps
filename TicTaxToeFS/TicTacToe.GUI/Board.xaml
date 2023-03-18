@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="TicTacToe.GUI.Board"
+			 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+			 xmlns:local="clr-namespace:TicTacToe.GUI"
+			 mc:Ignorable="d"
+			 Background="White"
+			 d:DesignHeight="300" d:DesignWidth="300"
+			 DataContext="{Binding RelativeSource={RelativeSource Self}}">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="*"/>
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+		<Button Name="UL" Content="{Binding DUL}" Click="Button_Click" Grid.Row="0" Grid.Column="0"/>
+		<Button Name="UC" Content="{Binding DUC}" Click="Button_Click" Grid.Row="0" Grid.Column="1"/>
+		<Button Name="UR" Content="{Binding DUR}" Click="Button_Click" Grid.Row="0" Grid.Column="2"/>
+		<Button Name="ML" Content="{Binding DML}" Click="Button_Click" Grid.Row="1" Grid.Column="0"/>
+		<Button Name="MC" Content="{Binding DMC}" Click="Button_Click" Grid.Row="1" Grid.Column="1"/>
+		<Button Name="MR" Content="{Binding DMR}" Click="Button_Click" Grid.Row="1" Grid.Column="2"/>
+		<Button Name="LL" Content="{Binding DLL}" Click="Button_Click" Grid.Row="2" Grid.Column="0"/>
+		<Button Name="LC" Content="{Binding DLC}" Click="Button_Click" Grid.Row="2" Grid.Column="1"/>
+		<Button Name="LR" Content="{Binding DLR}" Click="Button_Click" Grid.Row="2" Grid.Column="2"/>
+	</Grid>
+</UserControl>

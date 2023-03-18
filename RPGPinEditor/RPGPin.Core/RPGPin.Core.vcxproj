@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{31BE3006-55E9-42B4-BCA6-45D48AAA0EE2}</ProjectGuid>
+    <RootNamespace>RPGPinCore</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\Users\rgau1\Documents\Visual Studio 2015\Projects\RPGPinEditor\RPGPin.Data;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AudioScriptProcessor.cpp" />
+    <ClCompile Include="AudioService.cpp" />
+    <ClCompile Include="AudioStream.cpp" />
+    <ClCompile Include="AuditService.cpp" />
+    <ClCompile Include="BasicMathScriptProcessor.cpp" />
+    <ClCompile Include="CountsService.cpp" />
+    <ClCompile Include="EqualityScriptProcessor.cpp" />
+    <ClCompile Include="GameCacheableSettings.cpp" />
+    <ClCompile Include="GameServiceScriptProcessor.cpp" />
+    <ClCompile Include="GameSetting.cpp" />
+    <ClCompile Include="GlobalSettingService.cpp" />
+    <ClCompile Include="KeyBoard.cpp" />
+    <ClCompile Include="Logger.cpp" />
+    <ClCompile Include="LoopScriptProcessor.cpp" />
+    <ClCompile Include="MathScriptProcessor.cpp" />
+    <ClCompile Include="Mode.cpp" />
+    <ClCompile Include="ModeService.cpp" />
+    <ClCompile Include="Mouse.cpp" />
+    <ClCompile Include="PlayerService.cpp" />
+    <ClCompile Include="PlayerSetting.cpp" />
+    <ClCompile Include="Program.cpp" />
+    <ClCompile Include="Random.cpp" />
+    <ClCompile Include="RandomService.cpp" />
+    <ClCompile Include="ResourceService.cpp" />
+    <ClCompile Include="ScriptService.cpp" />
+    <ClCompile Include="SettingScriptProcessor.cpp" />
+    <ClCompile Include="SettingService.cpp" />
+    <ClCompile Include="SwitchScriptProcessor.cpp" />
+    <ClCompile Include="SystemScriptProcessor.cpp" />
+    <ClCompile Include="TimeScriptProcessor.cpp" />
+    <ClCompile Include="TimeService.cpp" />
+    <ClCompile Include="TimeStampService.cpp" />
+    <ClCompile Include="VariableScriptProcessor.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AdminResource.h" />
+    <ClInclude Include="AudioScriptProcessor.h" />
+    <ClInclude Include="AudioService.h" />
+    <ClInclude Include="AudioStream.h" />
+    <ClInclude Include="AuditService.h" />
+    <ClInclude Include="BasicCollection.h" />
+    <ClInclude Include="BasicMathScriptProcessor.h" />
+    <ClInclude Include="BlockCommandCode.h" />
+    <ClInclude Include="ComNetwork.h" />
+    <ClInclude Include="CountsService.h" />
+    <ClInclude Include="EqualityScriptProcessor.h" />
+    <ClInclude Include="GameCacheAbleSetting.h" />
+    <ClInclude Include="GameServiceScriptProcessor.h" />
+    <ClInclude Include="GameSetting.h" />
+    <ClInclude Include="GlobalSettingService.h" />
+    <ClInclude Include="IAudioChannel.h" />
+    <ClInclude Include="IKeyBoardListener.h" />
+    <ClInclude Include="LightService.h" />
+    <ClInclude Include="Mode.h" />
+    <ClInclude Include="IMouseListener.h" />
+    <ClInclude Include="KeyAction.h" />
+    <ClInclude Include="KeyBoard.h" />
+    <ClInclude Include="KeyData.h" />
+    <ClInclude Include="MathScriptProcessor.h" />
+    <ClInclude Include="ModeKeyMap.h" />
+    <ClInclude Include="ModeService.h" />
+    <ClInclude Include="Mouse.h" />
+    <ClInclude Include="MouseAction.h" />
+    <ClInclude Include="MouseData.h" />
+    <ClInclude Include="PlayerService.h" />
+    <ClInclude Include="PlayerSetting.h" />
+    <ClInclude Include="Random.h" />
+    <ClInclude Include="IResourceLocator.h" />
+    <ClInclude Include="ISettingProvider.h" />
+    <ClInclude Include="ILogger.h" />
+    <ClInclude Include="ITimeProvider.h" />
+    <ClInclude Include="Logger.h" />
+    <ClInclude Include="LoggingLevel.h" />
+    <ClInclude Include="LoopScriptProcessor.h" />
+    <ClInclude Include="ParameterBlock.h" />
+    <ClInclude Include="RandomService.h" />
+    <ClInclude Include="ResourceNotFoundException.h" />
+    <ClInclude Include="ResourceService.h" />
+    <ClInclude Include="ResourceType.h" />
+    <ClInclude Include="ScriptProcessor.h" />
+    <ClInclude Include="ScriptService.h" />
+    <ClInclude Include="SettingScriptProcessor.h" />
+    <ClInclude Include="SettingService.h" />
+    <ClInclude Include="SolenoidService.h" />
+    <ClInclude Include="SwitchScriptProcessor.h" />
+    <ClInclude Include="SystemScriptProcessor.h" />
+    <ClInclude Include="TimeScriptProcessor.h" />
+    <ClInclude Include="TimeService.h" />
+    <ClInclude Include="TimeStampService.h" />
+    <ClInclude Include="UniqueCollection.h" />
+    <ClInclude Include="UnknownCommandException.h" />
+    <ClInclude Include="VariableScriptProcessor.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RPGPin.Data\RPGPin.Data.vcxproj">
+      <Project>{fcd6f4f8-eb79-456b-8f48-1c3997597bd0}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

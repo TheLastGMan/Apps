@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<Onitama xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Cards>
+    <Card Title="TIGER">
+      <Description />
+      <LogoFilePath />
+      <CardColor>Green</CardColor>
+      <PieceColor>Blue</PieceColor>
+      <Moves>0000000100001000000000100</Moves>
+    </Card>
+    <Card Title="CRAB">
+      <Description />
+      <LogoFilePath />
+      <CardColor>Green</CardColor>
+      <PieceColor>Blue</PieceColor>
+      <Moves>0000000000101010010000000</Moves>
+    </Card>
+    <Card Title="MONKEY">
+      <Description />
+      <LogoFilePath />
+      <CardColor>Green</CardColor>
+      <PieceColor>Blue</PieceColor>
+      <Moves>0000001010001000101000000</Moves>
+    </Card>
+    <Card Title="CRANE">
+      <Description />
+      <LogoFilePath />
+      <CardColor>Green</CardColor>
+      <PieceColor>Blue</PieceColor>
+      <Moves>0000001010001000010000000</Moves>
+    </Card>
+    <Card Title="DRAGON">
+      <Description />
+      <LogoFilePath />
+      <CardColor>Green</CardColor>
+      <PieceColor>Red</PieceColor>
+      <Moves>0000001010001001000100000</Moves>
+    </Card>
+    <Card Title="ELEPHANT">
+      <Description />
+      <LogoFilePath />
+      <CardColor>Green</CardColor>
+      <PieceColor>Red</PieceColor>
+      <Moves>0000000000011100101000000</Moves>
+    </Card>
+    <Card Title="MANTIS">
+      <Description />
+      <LogoFilePath />
+      <CardColor>Green</CardColor>
+      <PieceColor>Red</PieceColor>
+      <Moves>0000000100001000101000000</Moves>
+    </Card>
+    <Card Title="BOAR">
+      <Description />
+      <LogoFilePath />
+      <CardColor>Green</CardColor>
+      <PieceColor>Red</PieceColor>
+      <Moves>0000000000011100010000000</Moves>
+    </Card>
+    <Card Title="FROG">
+      <Description />
+      <LogoFilePath />
+      <CardColor>Blue</CardColor>
+      <PieceColor>Red</PieceColor>
+      <Moves>0000000010101000100000000</Moves>
+    </Card>
+    <Card Title="GOOSE">
+      <Description />
+      <LogoFilePath />
+      <CardColor>Blue</CardColor>
+      <PieceColor>Blue</PieceColor>
+      <Moves>0000000010011100100000000</Moves>
+    </Card>
+    <Card Title="HORSE">
+      <Description />
+      <LogoFilePath />
+      <CardColor>Blue</CardColor>
+      <PieceColor>Red</PieceColor>
+      <Moves>0000000100011000010000000</Moves>
+    </Card>
+    <Card Title="EEL">
+      <Description />
+      <LogoFilePath />
+      <CardColor>Blue</CardColor>
+      <PieceColor>Blue</PieceColor>
+      <Moves>0000001000001100100000000</Moves>
+    </Card>
+    <Card Title="RABBIT">
+      <Description />
+      <LogoFilePath />
+      <CardColor>Red</CardColor>
+      <PieceColor>Blue</PieceColor>
+      <Moves>0000001000001010001000000</Moves>
+    </Card>
+    <Card Title="ROOSTER">
+      <Description />
+      <LogoFilePath />
+      <CardColor>Red</CardColor>
+      <PieceColor>Red</PieceColor>
+      <Moves>0000001000011100001000000</Moves>
+    </Card>
+    <Card Title="OX">
+      <Description />
+      <LogoFilePath />
+      <CardColor>Red</CardColor>
+      <PieceColor>Blue</PieceColor>
+      <Moves>0000000100001100010000000</Moves>
+    </Card>
+    <Card Title="COBRA">
+      <Description />
+      <LogoFilePath />
+      <CardColor>Red</CardColor>
+      <PieceColor>Red</PieceColor>
+      <Moves>0000000010011000001000000</Moves>
+    </Card>
+  </Cards>
+</Onitama>

@@ -1,0 +1,20 @@
+﻿<UserControl
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:local="clr-namespace:PixelMapper.Controls" x:Class="PixelMapper.Controls.SourceFolder" 
+        mc:Ignorable="d" 
+        d:DesignHeight="50" d:DesignWidth="640"
+        DataContext="{Binding Mode=OneWay, RelativeSource={RelativeSource Self}}">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Column="0" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Margin="0 0 5 0" Content="Source Folder:"/>
+        <TextBox Grid.Column="1" Margin="5, 8" x:Name="FolderPath" TextChanged="FolderPath_TextChanged" IsReadOnly="True" Background="Ivory" Text="{Binding SelectedFolder}"/>
+        <Button Grid.Column="2" Margin="5, 8" x:Name="BrowseBtn" Click="BrowseBtn_Click" Content="Browse"/>
+    </Grid>
+</UserControl>

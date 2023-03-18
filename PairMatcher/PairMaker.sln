@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "PairMaker", "PairMaker\PairMaker.vbproj", "{5F67D52F-FB5B-4A33-AAD1-4B7023A882D3}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://rpgcor.tfspreview.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = PairMaker\\PairMaker.vbproj
+		SccProjectName1 = PairMaker
+		SccLocalPath1 = PairMaker
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5F67D52F-FB5B-4A33-AAD1-4B7023A882D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F67D52F-FB5B-4A33-AAD1-4B7023A882D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F67D52F-FB5B-4A33-AAD1-4B7023A882D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F67D52F-FB5B-4A33-AAD1-4B7023A882D3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

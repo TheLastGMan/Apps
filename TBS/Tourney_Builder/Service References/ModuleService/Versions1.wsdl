@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Get_Type_Name">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="typex" type="tns:mod_type" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="mod_type">
+        <s:restriction base="s:string">
+          <s:enumeration value="D" />
+          <s:enumeration value="T" />
+          <s:enumeration value="R" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="Get_Type_NameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_Type_NameResult" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="typex" type="tns:mod_type" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Single_Char_Identifer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="type" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Single_Char_IdentiferResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_Single_Char_IdentiferResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="type" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Modules">
+        <s:complexType />
+      </s:element>
+      <s:element name="Get_ModulesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_ModulesResult" type="tns:ArrayOfModulex" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfModulex">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Modulex" type="tns:Modulex" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Modulex">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="version" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="display_name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="file_assembly" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="namespce" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="type" type="tns:mod_type" />
+          <s:element minOccurs="0" maxOccurs="1" name="file" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="Get_Type_NameSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Type_Name" />
+  </wsdl:message>
+  <wsdl:message name="Get_Type_NameSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_Type_NameResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_Single_Char_IdentiferSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Single_Char_Identifer" />
+  </wsdl:message>
+  <wsdl:message name="Get_Single_Char_IdentiferSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_Single_Char_IdentiferResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_ModulesSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Modules" />
+  </wsdl:message>
+  <wsdl:message name="Get_ModulesSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_ModulesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="VersionsSoap">
+    <wsdl:operation name="Get_Type_Name">
+      <wsdl:input message="tns:Get_Type_NameSoapIn" />
+      <wsdl:output message="tns:Get_Type_NameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Single_Char_Identifer">
+      <wsdl:input message="tns:Get_Single_Char_IdentiferSoapIn" />
+      <wsdl:output message="tns:Get_Single_Char_IdentiferSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Modules">
+      <wsdl:input message="tns:Get_ModulesSoapIn" />
+      <wsdl:output message="tns:Get_ModulesSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="VersionsSoap" type="tns:VersionsSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Get_Type_Name">
+      <soap:operation soapAction="http://tempuri.org/Get_Type_Name" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Single_Char_Identifer">
+      <soap:operation soapAction="http://tempuri.org/Get_Single_Char_Identifer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Modules">
+      <soap:operation soapAction="http://tempuri.org/Get_Modules" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="VersionsSoap12" type="tns:VersionsSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Get_Type_Name">
+      <soap12:operation soapAction="http://tempuri.org/Get_Type_Name" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Single_Char_Identifer">
+      <soap12:operation soapAction="http://tempuri.org/Get_Single_Char_Identifer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Modules">
+      <soap12:operation soapAction="http://tempuri.org/Get_Modules" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Versions">
+    <wsdl:port name="VersionsSoap" binding="tns:VersionsSoap">
+      <soap:address location="http://www.rpgcor.com/apps/tbs/Versions.asmx" />
+    </wsdl:port>
+    <wsdl:port name="VersionsSoap12" binding="tns:VersionsSoap12">
+      <soap12:address location="http://www.rpgcor.com/apps/tbs/Versions.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

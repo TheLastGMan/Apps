@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="PixelMapper.Profile.RpgDmd.ConversionProfile.DMD64.DMD64SettingEditor"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="80" d:DesignWidth="640"
+             DataContext="{Binding Mode=OneWay, RelativeSource={RelativeSource Self}}">
+    <UserControl.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Margin" Value="2.5"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <TextBlock Grid.Column="0" Grid.Row="0" Text="Brightness" HorizontalAlignment="Center" FontSize="12"/>
+        <Slider Grid.Column="0" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="5 0" IsMoveToPointEnabled="True"
+                SmallChange="1" LargeChange="10" Interval="10" TickFrequency="10" TickPlacement="BottomRight" Minimum="0" Maximum="200" Value="{Binding BrightnessValue}"
+                KeyUp="Slider_KeyUp" PreviewMouseUp="Slider_PreviewMouseUp"/>
+        <Label Grid.Column="0" Grid.Row="2" Content="{Binding BrightnessValueDisplay}" HorizontalAlignment="Center"/>
+        
+        <TextBlock Grid.Column="1" Grid.Row="0" Text="Contrast" HorizontalAlignment="Center" FontSize="12"/>
+        <Slider Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="5 0" IsMoveToPointEnabled="True"
+                SmallChange="1" LargeChange="5" Minimum="10" Maximum="50" Interval="5" TickFrequency="5" TickPlacement="BottomRight" Value="{Binding ContrastValue}"
+                KeyUp="Slider_KeyUp" PreviewMouseUp="Slider_PreviewMouseUp"/>
+        <Label Grid.Column="1" Grid.Row="2" Content="{Binding ContrastValueDisplay}" HorizontalAlignment="Center"/>
+    </Grid>
+</UserControl>

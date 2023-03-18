@@ -1,0 +1,112 @@
+﻿<UserControl x:Class="PixelMapper.Profile.RpgDmd.ConversionProfile.DMD.DMDSettingEditor"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="120" d:DesignWidth="640"
+             DataContext="{Binding Mode=OneWay, RelativeSource={RelativeSource Self}}">
+    <UserControl.Resources>
+        <Style x:Key="SliderBase" TargetType="Slider">
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="IsMoveToPointEnabled" Value="True"/>
+            <Setter Property="Margin" Value="5 0"/>
+            <Setter Property="TickPlacement" Value="BottomRight"/>
+            <Setter Property="Margin" Value="2.5"/>
+        </Style>
+        <Style x:Key="RGBSlider" BasedOn="{StaticResource SliderBase}" TargetType="Slider">
+            <Setter Property="Minimum" Value="0"/>
+            <Setter Property="Maximum" Value="255"/>
+            <Setter Property="Interval" Value="5"/>
+            <Setter Property="TickFrequency" Value="15"/>
+            <Setter Property="LargeChange" Value="15"/>
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Margin" Value="2.5"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="0" Grid.Row="0">
+                <Run Text="Brightness ("/>
+                <Run Text="{Binding BrightnessValueDisplay, Mode=OneWay}"/>
+                <Run Text=")"/>
+            </TextBlock>
+            <Slider Grid.Column="0" Grid.Row="1"
+                SmallChange="1" LargeChange="10" Interval="10" TickFrequency="10" Minimum="0" Maximum="200" Value="{Binding BrightnessValue}"
+                KeyUp="Slider_KeyUp" PreviewMouseUp="Slider_PreviewMouseUp"
+                Style="{StaticResource SliderBase}"/>
+            
+            <TextBlock Grid.Column="1" Grid.Row="0">
+                <Run Text="Contrast ("/>
+                <Run Text="{Binding ContrastValueDisplay, Mode=OneWay}"/>
+                <Run Text=")"/>
+            </TextBlock>
+            <Slider Grid.Column="1" Grid.Row="1"
+                SmallChange="1" LargeChange="5" Interval="5" TickFrequency="5" Minimum="10" Maximum="50" Value="{Binding ContrastValue}"
+                KeyUp="Slider_KeyUp" PreviewMouseUp="Slider_PreviewMouseUp"
+                Style="{StaticResource SliderBase}"/>
+        </Grid>
+        
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="35"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Row="0" Grid.Column="0">
+                <Run Text="Red ("/>
+                <Run Text="{Binding ElementName=RSlider, Path=Value}"/>
+                <Run Text=")"/>
+            </TextBlock>
+            <Slider x:Name="RSlider" Grid.Row="1" Grid.Column="0" Value="{Binding RValue}" Background="{Binding RColor, Mode=OneWay}"
+                    KeyUp="Slider_KeyUp" PreviewMouseUp="Slider_PreviewMouseUp"
+                    Style="{StaticResource RGBSlider}"/>
+            
+            <TextBlock Grid.Row="0" Grid.Column="1">
+                <Run Text="Green ("/>
+                <Run Text="{Binding ElementName=GSlider, Path=Value}"/>
+                <Run Text=")"/>
+            </TextBlock>
+            <Slider x:Name="GSlider" Grid.Row="1" Grid.Column="1" Value="{Binding GValue}" Background="{Binding GColor, Mode=OneWay}"
+                    KeyUp="Slider_KeyUp" PreviewMouseUp="Slider_PreviewMouseUp"
+                    Style="{StaticResource RGBSlider}"/>
+            
+            <TextBlock Grid.Row="0" Grid.Column="2">
+                <Run Text="Blue ("/>
+                <Run Text="{Binding ElementName=BSlider, Path=Value}"/>
+                <Run Text=")"/>
+            </TextBlock>
+            <Slider x:Name="BSlider" Grid.Row="1" Grid.Column="2" Value="{Binding BValue}" Background="{Binding BColor, Mode=OneWay}"
+                    KeyUp="Slider_KeyUp" PreviewMouseUp="Slider_PreviewMouseUp"
+                    Style="{StaticResource RGBSlider}"/>
+
+            <Border Grid.Row="0" Grid.Column="3" Grid.RowSpan="2" Margin="2.5"
+                    BorderBrush="Black" BorderThickness="1" Background="{Binding FColor, Mode=OneWay}"/>
+        </Grid>
+    </Grid>
+</UserControl>

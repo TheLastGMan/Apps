@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Onitama.Core", "Onitama.Core\Onitama.Core.csproj", "{CE75A665-C8E3-4C79-A80E-1D0BFEFF3A50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Onitama.TestCLI", "Onitama.TestCLI\Onitama.TestCLI.csproj", "{F2A3D081-F8E3-48B3-A6EF-C720463A7077}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CE75A665-C8E3-4C79-A80E-1D0BFEFF3A50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE75A665-C8E3-4C79-A80E-1D0BFEFF3A50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE75A665-C8E3-4C79-A80E-1D0BFEFF3A50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE75A665-C8E3-4C79-A80E-1D0BFEFF3A50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2A3D081-F8E3-48B3-A6EF-C720463A7077}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2A3D081-F8E3-48B3-A6EF-C720463A7077}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2A3D081-F8E3-48B3-A6EF-C720463A7077}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2A3D081-F8E3-48B3-A6EF-C720463A7077}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

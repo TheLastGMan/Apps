@@ -1,0 +1,83 @@
+﻿<UserControl
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+            xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+            xmlns:local="clr-namespace:PixelMapper.Controls" x:Class="PixelMapper.Controls.ImageViewer" 
+            mc:Ignorable="d" 
+            d:DesignHeight="300" d:DesignWidth="640"
+            DataContext="{Binding Mode=OneWay, RelativeSource={RelativeSource Self}}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Border BorderBrush="Black" BorderThickness="0 0 0 1" Visibility="{Binding EnableCustomControlDivider}">
+            <Expander Header="Conversion Profile Settings" IsExpanded="True" FontWeight="Bold" Background="AntiqueWhite">
+                <Border Background="Gainsboro" BorderBrush="Black" BorderThickness="0 1 0 0">
+                    <ContentControl Grid.Row="0" Content="{Binding ImageFormat.CustomControl}"/>
+                </Border>
+            </Expander>
+        </Border>
+        <!--<GridSplitter Grid.Row="1" Height="5" Background="LightSteelBlue"
+                      BorderBrush="Black" BorderThickness="0 0 0 1"
+                      Visibility="{Binding EnableCustomControlDivider}" HorizontalAlignment="Stretch" />-->
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+            <Border Grid.Column="0" BorderThickness="0 0 2 0" BorderBrush="Black">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="24" Content="Images"/>
+                    <ListBox Grid.Row="1" Margin="0" ItemsSource="{Binding LoadedImages}"
+                         SelectedItem="{Binding SelectedImage}" SelectedIndex="{Binding SelectedIndex}"
+                         SelectionChanged="ListBox_SelectionChanged" Background="Ivory">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Key}" FontSize="12"/>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </Grid>
+            </Border>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Border Grid.Row="0" BorderBrush="Black" BorderThickness="0 0 2 2">
+                    <TextBlock Text="Original" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24">
+                        <TextBlock.LayoutTransform>
+                            <RotateTransform Angle="-90"/>
+                        </TextBlock.LayoutTransform>
+                    </TextBlock>
+                </Border>
+                <Border Grid.Row="0" Grid.Column="1" BorderThickness="0 0 0 2" BorderBrush="Black">
+                    <Image Stretch="Uniform" Margin="5" Source="{Binding SelectedImage.Value}"/>
+                </Border>
+                <GridSplitter Grid.Row="1" Grid.ColumnSpan="2"
+                              BorderBrush="Black" BorderThickness="0 0 0 2"
+                              Height="6" Background="LightSteelBlue" HorizontalAlignment="Stretch" />
+                <Border Grid.Row="2" BorderBrush="Black" BorderThickness="0 0 2 0">
+                    <TextBlock Grid.Row="1" Text="Converted" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24">
+                        <TextBlock.LayoutTransform>
+                            <RotateTransform Angle="-90"/>
+                        </TextBlock.LayoutTransform>
+                    </TextBlock>
+                </Border>
+                <Image Grid.Row="2" Grid.Column="1" Stretch="Uniform" Margin="2" Source="{Binding PreviewImage}"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>

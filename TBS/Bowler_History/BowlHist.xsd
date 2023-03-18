@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="BowlHist" targetNamespace="http://tempuri.org/BowlHist.xsd" xmlns:mstns="http://tempuri.org/BowlHist.xsd" xmlns="http://tempuri.org/BowlHist.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="BowlHist" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="BowlHist" msprop:Generator_UserDSName="BowlHist">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="History" msprop:Generator_TableClassName="HistoryDataTable" msprop:Generator_TableVarName="tableHistory" msprop:Generator_TablePropName="History" msprop:Generator_RowDeletingName="HistoryRowDeleting" msprop:Generator_UserTableName="History" msprop:Generator_RowChangingName="HistoryRowChanging" msprop:Generator_RowEvHandlerName="HistoryRowChangeEventHandler" msprop:Generator_RowDeletedName="HistoryRowDeleted" msprop:Generator_RowEvArgName="HistoryRowChangeEvent" msprop:Generator_RowChangedName="HistoryRowChanged" msprop:Generator_RowClassName="HistoryRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Week" msprop:Generator_ColumnVarNameInTable="columnWeek" msprop:Generator_ColumnPropNameInRow="Week" msprop:Generator_ColumnPropNameInTable="WeekColumn" msprop:Generator_UserColumnName="Week" type="xs:string" minOccurs="0" />
+              <xs:element name="Scores" msprop:Generator_ColumnVarNameInTable="columnScores" msprop:Generator_ColumnPropNameInRow="Scores" msprop:Generator_ColumnPropNameInTable="ScoresColumn" msprop:Generator_UserColumnName="Scores" type="xs:string" minOccurs="0" />
+              <xs:element name="Average" msprop:Generator_ColumnVarNameInTable="columnAverage" msprop:Generator_ColumnPropNameInRow="Average" msprop:Generator_ColumnPropNameInTable="AverageColumn" msprop:Generator_UserColumnName="Average" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Series" msprop:Generator_ColumnVarNameInTable="columnSeries" msprop:Generator_ColumnPropNameInRow="Series" msprop:Generator_ColumnPropNameInTable="SeriesColumn" msprop:Generator_UserColumnName="Series" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

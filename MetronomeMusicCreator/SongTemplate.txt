@@ -1,0 +1,28 @@
+/* 
+ * File:   Song{0}.h
+ * Author: Ryan Gau | RPGCor
+ *
+ * Created on {1}
+ */
+
+#ifndef SONG{0}_H
+#define	SONG{0}_H
+#include "MusicBeatType.h"
+#include "MusicNoteType.h"
+
+#ifdef	__cplusplus
+extern "C"
+{
+#endif
+
+    //{2}
+    #define Song{0}_BPM {3}
+    #define Song{0}_NoteCount {4}
+    const ushort Song{0}_Notes[Song{0}_NoteCount] = {{5}};
+    const byte Song{0}_Types[Song{0}_NoteCount] = {{6}};
+
+#ifdef	__cplusplus
+}
+#endif
+
+#endif	/* SONG{0}_H */

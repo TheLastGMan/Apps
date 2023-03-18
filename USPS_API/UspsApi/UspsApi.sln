@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RPGCor.USPS", "RPGCor.USPS\RPGCor.USPS.csproj", "{085624E5-6B70-40DE-8B93-50CBF1CE8373}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPGCor.USPS.Test1", "RPGCor.USPS.Test1\RPGCor.USPS.Test1.csproj", "{91B87C9F-C986-41DA-846D-DFDFC72F2A98}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{085624E5-6B70-40DE-8B93-50CBF1CE8373}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{085624E5-6B70-40DE-8B93-50CBF1CE8373}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{085624E5-6B70-40DE-8B93-50CBF1CE8373}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{085624E5-6B70-40DE-8B93-50CBF1CE8373}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91B87C9F-C986-41DA-846D-DFDFC72F2A98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91B87C9F-C986-41DA-846D-DFDFC72F2A98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91B87C9F-C986-41DA-846D-DFDFC72F2A98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91B87C9F-C986-41DA-846D-DFDFC72F2A98}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E7EF2FC8-A5F4-4988-8DE7-4E07309CC2D6}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 1
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://rpgcor.visualstudio.com/
+		SccProjectUniqueName0 = RPGCor.USPS\\RPGCor.USPS.csproj
+		SccProjectName0 = RPGCor.USPS
+		SccAuxPath0 = https://rpgcor.visualstudio.com
+		SccLocalPath0 = RPGCor.USPS
+		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="212109503aa6455091aabf71508aacfa" Name="Diagram1">
+        <EntityTypeShape EntityType="ERM_ReportingModel.BUSINESS" Width="1.5" PointX="1.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERM_ReportingModel.COMPANY" Width="1.5" PointX="7.125" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERM_ReportingModel.ERM_BUSINESS_COMPANY_ASSOC" Width="3" PointX="3.625" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERM_ReportingModel.ERM_FINANCIAL_COLUMN" Width="2.625" PointX="4" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERM_ReportingModel.ERM_FINANCIAL_COLUMN_GROUP" Width="2.875" PointX="7.125" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERM_ReportingModel.ERM_FINANCIAL_COLUMN_GROUP_ASSOC" Width="3.5" PointX="10.625" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERM_ReportingModel.ERM_PERIOD_TYPE" Width="2.25" PointX="1" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERM_ReportingModel.ERM_REPORT_SEGMENT" Width="2.625" PointX="0.5" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERM_ReportingModel.ERM_RUN" Width="3.125" PointX="10.625" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERM_ReportingModel.ERM_SHOCK_GROUP" Width="2.375" PointX="0.875" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ERM_ReportingModel.SHOCK" Width="1.5" PointX="7.125" PointY="5.625" IsExpanded="true" />
+        <AssociationConnector Association="ERM_ReportingModel.fk_BUSINESS_ID_BUSINESS_BUSINESS_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="ERM_ReportingModel.fk_ERM_REPORT_SEGMENT_ID_CAPITAL_ERM_REPORT_SEGMENT_ERM_REPORT_SEGMENT_ID" ManuallyRouted="false" />
+        <AssociationConnector Association="ERM_ReportingModel.fk_ERM_REPORT_SEGMENT_ID_GAAP_ERM_REPORT_SEGMENT_ERM_REPORT_SEGMENT_ID" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="ERM_ReportingModel.ERM_FINANCIAL_VALUE" Width="2.625" PointX="4" PointY="7.875" />
+        <AssociationConnector Association="ERM_ReportingModel.FK_ERM_FINANCIAL_COLUMN_SEQ_ID_ERM_FINANCIAL_COLUMN_ERM_FINANCIAL_COLUMN_SEQ_ID" />
+        <AssociationConnector Association="ERM_ReportingModel.FK_ERM_PERIOD_TYPE_SEQ_ID_ERM_PERIOD_TYPE_ERM_PERIOD_TYPE_SEQ_ID" />
+        <AssociationConnector Association="ERM_ReportingModel.FK_ERM_SHOCK_GROUP_SEQ_ID_ERM_SHOCK_GROUP_ERM_SHOCK_GROUP_SEQ_ID" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

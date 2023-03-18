@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Pixel Mapper</title>
+    <style type="text/css">
+        body {
+            background: #C0C0C0;
+        }
+
+        h1 {
+        }
+
+        h2, .h1 {
+            margin-left: 15px;
+        }
+
+        h3, .h2 {
+            margin-left: 30px;
+        }
+
+        h4, .h3 {
+            margin-left: 45px;
+        }
+
+        h5, .h4 {
+            margin-left: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <h1>Pixel Mapper</h1>
+        <div>
+            <h2>About</h2>
+            <p class="h2">
+                Pixel Mapper allows one to preview what an image would look like through a defined filter and be able to export it into a non standard format.
+            </p>
+            <h2><a href="download.html">Download</a></h2>
+            <p class="h2">
+                Application automatically checks once per month for any updates.
+            </p>
+            <h2>Profiles Included</h2>
+            <h3>Conversion</h3>
+            <h4>DMD64</h4>
+            <p class="h4">
+                64 Color display consisting of 4 shades per color channel (R,G,B).<br/>
+                Preview set up to convert input image into a 128 pixels wide by 32 pixel high render.<br/>
+                Brightness/Contrast : Alters image brightess and now defined one pixel is next to another.
+            </p>
+            <h4>DMD Classic</h4>
+            <p class="h4">
+                One Color DMD display consisting of 4 shades of one color.<br/>
+                Preview set up to convert input image into a 128 pixels wide by 32 pixel high render.<br />
+                Brightness/Contrast : Alters image brightess and now defined one pixel is next to another.<br/>
+                R/G/B : Shows how the weighted average grayscale image would look on a one color DMD.
+            </p>
+            <h3>Output</h3>
+            <h4>Matrix64</h4>
+            <p class="h4">
+                64 Color display where each pixel is stored as hex, binary 0b00BBGGRR, in a matrix like format.<br/>
+                ex: {Frame},{Frame}... where "Frame" = {Row},{Row}... where "Row" = {pixel, pixel...}
+            </p>
+            <h4>DMD Byte Packed Stream</h4>
+            <p class="h4">
+                Packs four pixels into one byte using the logic (0b11223344) where the width must be a multiple of 4
+            </p>
+        </div>
+        <div>
+            Copyright: RPGCor | Ryan Gau | 2015 - Current
+        </div>
+    </div>
+</body>
+</html>
