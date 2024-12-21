@@ -436,6 +436,7 @@ namespace ReadingLoader
             content = content.Replace("Â", "");
             content = content.Replace("<br />", Environment.NewLine);
             content = content.Replace("<br/>", Environment.NewLine);
+            content = content.Replace("<br>", Environment.NewLine);
             content = content.Replace("<span>", "");
             content = content.Replace("</span>", "");
             //content = content.Replace(" ", " "); //replace similar to a space with a ascii space

@@ -84,7 +84,7 @@ namespace ReadingLoader
                 sidx = subData.IndexOf("<a", sidx);
                 sidx = subData.IndexOf(">", sidx) + 1;
                 eidx = subData.IndexOf("</", sidx);
-                var rVerse = subData.Substring(sidx, eidx - sidx);
+                var rVerse = subData.Substring(sidx, eidx - sidx).Replace(" \">", string.Empty);
 
                 //body
                 sidx = subData.IndexOf("body", sidx);
@@ -110,10 +110,7 @@ namespace ReadingLoader
         {
             var nHeader = header.Replace("Reading 2", "Reading II");
             nHeader = nHeader.Replace("Reading 1", "Reading I");
-            nHeader = nHeader.Replace("&nbsp;", "");
-            nHeader = nHeader.Replace("Â", "");
-            nHeader = nHeader.TrimEnd(new char[] { ' ', ' ' });
-            nHeader = nHeader.TrimStart(new char[] { ' ', ' ' });
+            nHeader = FormatContent(nHeader);
             return nHeader;
         }
 
@@ -121,7 +118,11 @@ namespace ReadingLoader
         {
             var nContent = content.Replace("<p>", "");
             nContent = nContent.Replace("</p>", "<br/>");
+            nContent = nContent.Replace("&nbsp;", " ");
+            nContent = nContent.Replace("Â", "");
             nContent = nContent.Trim(Environment.NewLine.ToCharArray().Concat(new char[] { ' ' }).ToArray());
+            nContent = nContent.TrimEnd(new char[] { ' ', ' ' });
+            nContent = nContent.TrimStart(new char[] { ' ', ' ' });
             return nContent;
         }
 

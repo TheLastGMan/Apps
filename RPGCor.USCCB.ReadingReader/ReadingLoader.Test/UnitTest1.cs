@@ -24,5 +24,14 @@ namespace ReadingLoader.Test
             var verses = util.ParseVersesFromFeed(feed);
             Assert.AreEqual(4, verses.Count);
         }
+
+        [TestMethod]
+        public void ParseBibleFormat2()
+        {
+            var util = new ReadingUtil();
+            var feed = System.IO.File.ReadAllText("./VerseFormat2.txt");
+            var verses = util.ParseVersesFromFeed(feed);
+            Assert.AreEqual(5, verses.Count);
+        }
     }
 }

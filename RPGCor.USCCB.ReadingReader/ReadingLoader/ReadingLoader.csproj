@@ -221,8 +221,7 @@
     <Compile Include="ThisAddIn.cs">
       <SubType>Code</SubType>
     </Compile>
-    <None Include="ReadingLoader_1_TemporaryKey.pfx" />
-    <None Include="ReadingLoader_TemporaryKey.pfx" />
+    <None Include="ReadingLoader_2_TemporaryKey.pfx" />
     <None Include="ThisAddIn.Designer.xml">
       <DependentUpon>ThisAddIn.cs</DependentUpon>
     </None>
@@ -272,10 +271,10 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>ReadingLoader_1_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>ReadingLoader_2_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>6D5FAB8CED8B1C7D1D5B61D924B8D666B58D58EB</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>03D68BB0B8CF6AF6A313EDCE8CFF5DB94D641BA5</ManifestCertificateThumbprint>
   </PropertyGroup>
   <!-- Include the build rules for a C# project. -->
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
